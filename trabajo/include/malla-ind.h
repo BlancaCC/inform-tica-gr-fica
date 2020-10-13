@@ -93,5 +93,18 @@ class Cubo24 : public MallaInd
 } ;
 
 
+// -- MIS DECLARACIAONES
+
+class Tetraedro: public MallaInd
+{
+public:
+  Tetraedro();
+};
+
+class CuboColor: public MallaInd
+{
+public:
+  CuboColor();
+};
 
 #endif

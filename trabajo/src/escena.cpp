@@ -185,6 +185,9 @@ Escena1::Escena1()
    //     objetos.push_back( new .... )
    // .........
 
+   objetos.push_back( new Tetraedro());
+   objetos.push_back( new CuboColor() );
+
 
    cout << "hecho." << endl << flush ;
 }
