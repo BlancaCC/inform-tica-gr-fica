@@ -92,9 +92,61 @@ class Escena1 : public Escena
 // -------------------------------------------------------------------------
 // COMPLETAR: Práctica 2, 3, 4 y 5.
 // Añadir la declaración de las clases Escena2, Escena3, etc ..... para definir
+
+
 // los objetos que se indican en los guiones de las prácticas 2,3,4 y 5.
 
 
+
+// PRÁCTICA 2
+
+class Escena2 : public Escena
+{
+public:
+  Escena2();
+};
+
+
+// objetos
+// clases mallas indexadas por revolución de un perfil generado proceduralmente
+class Cilindro : public MallaRevol
+{
+   public:
+      // Constructor: crea el perfil original y llama a inicializar
+      // la base tiene el centro en el origen, el radio y la altura son 1
+      Cilindro(
+         const int num_verts_per,         // número de vértices del perfil original (m)
+         const unsigned nperfiles         // número de perfiles (n)
+      ) ;
+} ;
+
+
+class Cono : public MallaRevol
+{
+public:
+      // Constructor: crea el perfil original y llama a inicializar
+      // la base tiene el centro en el origen, el radio y altura son 1
+      Cono(
+         const int num_verts_per,         // número de vértices del perfil original (m)
+         const unsigned nperfiles         // número de perfiles (n)
+      ) ;
+} ;
+
+class Esfera : public MallaRevol
+{
+public:
+      // Constructor: crea el perfil original y llama a inicializar
+      // La esfera tiene el centro en el origen, el radio es la unidad
+      Esfera(
+         const int num_verts_per,         // número de vértices del perfil original (M )
+         const unsigned nperfiles         // número de perfiles (N )
+      ) ;
+} ;
+
+
+
+
+// -------------
 
 
 #endif // ESCENA_H

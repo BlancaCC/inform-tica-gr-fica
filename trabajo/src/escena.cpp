@@ -12,6 +12,7 @@
 #include "seleccion.h"
 
 
+using namespace std; 
 
 
 // -----------------------------------------------------------------------------------------------
@@ -195,10 +196,31 @@ Escena1::Escena1()
 // -------------------------------------------------------------------------
 // COMPLETAR: Práctica 2
 // Añadir la implementación del constructor de la clase Escena2 para construir
+
+Escena1::Escena2()
+{
+   using namespace std ;
+   cout << "Creando objetos de escena 2 .... " << flush ;
+
+   // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
+   objetos.push_back( new MallaPLY("../recursos/plys/ant.ply") );
+   objetos.push_back( new MallaRevolPLY("../recursos/plys/peon.ply", 200) );
+   objetos.push_back( new Cilindro(10, 20) );   
+
+
+   cout << "hecho." << endl << flush ;
+}
 // los objetos que se indican en los guiones de las práctica 2
 // .......
 
-
+Cilindro::Cilindro
+(
+ const int num_verts_per,
+ const unsigned nperfiles
+ )
+{
+  ponerNombre()
+}
 
 // -------------------------------------------------------------------------
 // COMPLETAR: Práctica 3

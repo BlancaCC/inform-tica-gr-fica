@@ -33,7 +33,7 @@ class MallaRevol : public MallaInd
       const unsigned               num_copias  // número de copias del perfil
    ) ;
 } ;
-// --------------------------------------------------------------------- lauvivaldi@hotmail.com
+// --------------------------------------------------------------------- 
 
 
 class MallaRevolPLY : public MallaRevol
