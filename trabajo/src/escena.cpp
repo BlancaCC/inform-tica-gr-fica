@@ -203,8 +203,7 @@ Escena2::Escena2()
    cout << "Creando objetos de escena 2 .... " << flush ;
 
    // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
-   // objetos.push_back( new MallaPLY("../recursos/plys/ant.ply") );
-   //objetos.push_back( new MallaRevolPLY("../recursos/plys/peon.ply", 200) );
+  
    objetos.push_back( new Cilindro(4, 27) ); // con dos tapas
    objetos.push_back( new Cilindro(2, 13) ); // sin tapa
    //objetos.push_back( new Cilindro(3, 13) ); // con una tapa
@@ -213,6 +212,10 @@ Escena2::Escena2()
    objetos.push_back( new Cono(7, 15 ));  // con tapa
 
    objetos.push_back( new Esfera(20, 20 ));  // con tapa
+
+   // veamos si está bien costruida las mallas 
+   objetos.push_back( new MallaPLY("../recursos/plys/ant.ply") );
+   objetos.push_back( new MallaRevolPLY("../recursos/plys/peon.ply", 200) );
 
    
 
