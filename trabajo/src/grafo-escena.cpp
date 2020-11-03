@@ -186,7 +186,13 @@ Matriz4f * NodoGrafoEscena::leerPtrMatriz( unsigned indice )
    // COMPLETAR: práctica 3: devolver puntero la matriz en ese índice
    //   (debe de dar error y abortar si no hay una matriz en esa entrada)
    // ........(sustituir 'return nullptr' por lo que corresponda)
-   return nullptr ;
+
+  assert(indice < entradas.size());
+  assert( entradas[indice].tipo == TipoEntNGE::transformacion ); // debe de ser matriz
+  assert ( entradas[indice].matriz != nullptr); 
+  
+  
+  return entradas[indice].matriz;
 
 
 }
