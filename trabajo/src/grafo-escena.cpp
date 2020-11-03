@@ -149,8 +149,12 @@ NodoGrafoEscena::NodoGrafoEscena()
 unsigned NodoGrafoEscena::agregar( const EntradaNGE & entrada )
 {
    // COMPLETAR: práctica 3: agregar la entrada al nodo, devolver índice de la entrada agregada
-   // ........
-   return 0 ; // sustituir por lo que corresponda ....
+   
+  unsigned  indice = entradas.size(); // este es el índice que tendrá ya que se añade al final 
+  
+  entradas.push_back(entrada);
+  
+   return indice ; // sustituir por lo que corresponda ....
 
 }
 // -----------------------------------------------------------------------------
