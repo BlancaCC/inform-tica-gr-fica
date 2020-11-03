@@ -81,6 +81,37 @@ EntradaNGE::~EntradaNGE()
 void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
 {
    // COMPLETAR: práctica 3: recorrer las entradas y visualizar cada nodo.
+
+  //basado en las diapositivas del tema 2 pag 125
+
+  // guarda modelview actual
+  cv.cauce_act-> pushMM();
+
+  //reocrrer todas las entrada del array que hay en el modo
+  for( unsigned i = 0; i < entradas.size(); i++ )
+    {
+      switch( entradas[i].tipo )
+	{
+	  case TipoEntNGE::objeto:
+	    entradas[i].objeto -> visualizarGL(cv);
+	    break;
+
+	    case TipoEntNGE::transformacion:
+	      cv.cauce_act -> compMM( *(entradas[i].matriz));
+	      break;
+
+	      default:
+		cout << "Error" << endl;
+		exit(-1);
+		break; 
+		
+	}
+    }
+
+  // restauramos el modelview guardada
+ cv.cauce_act -> popMM();
+
+  
    // ........
 
    // COMPLETAR: práctica 4: en la práctica 4, si 'cv.iluminacion' es 'true',
