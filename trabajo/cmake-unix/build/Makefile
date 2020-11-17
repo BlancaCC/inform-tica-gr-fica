@@ -547,6 +547,33 @@ home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.s
 .PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.s
 
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.o: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.o
+
+# target to build an object file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.i: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.i
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.i
+
+# target to preprocess a source file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.i
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.i
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.s: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.s
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.s
+
+# target to generate assembly for a file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.s
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.s
+
 home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.o: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o
 
 .PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.o
@@ -655,6 +682,9 @@ help:
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.o"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.i"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.s"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.o"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.i"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.s"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.o"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.i"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.s"

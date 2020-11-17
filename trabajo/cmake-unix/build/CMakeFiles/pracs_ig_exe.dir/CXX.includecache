@@ -116,6 +116,10 @@ tuplasg_impl.h
 
 ../../../recursos/include/tuplasg_impl.h
 
+../../../trabajo/include/array-verts.h
+ig-aux.h
+-
+
 ../../../trabajo/include/camara.h
 tuplasg.h
 ../../../trabajo/include/tuplasg.h
@@ -138,6 +142,22 @@ objeto3d.h
 materiales-luces.h
 ../../../trabajo/include/materiales-luces.h
 
+../../../trabajo/include/malla-ind.h
+vector
+-
+objeto3d.h
+../../../trabajo/include/objeto3d.h
+array-verts.h
+../../../trabajo/include/array-verts.h
+
+../../../trabajo/include/malla-revol.h
+vector
+-
+string
+-
+malla-ind.h
+../../../trabajo/include/malla-ind.h
+
 ../../../trabajo/include/materiales-luces.h
 vector
 -
@@ -147,6 +167,10 @@ tuplasg.h
 ../../../trabajo/include/tuplasg.h
 lector-jpg.h
 ../../../trabajo/include/lector-jpg.h
+
+../../../trabajo/include/modelo-jer.h
+grafo-escena.h
+../../../trabajo/include/grafo-escena.h
 
 ../../../trabajo/include/objeto3d.h
 string
@@ -168,11 +192,21 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp
-ig-aux.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
+modelo-jer.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.h
+malla-ind.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.h
+malla-revol.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.h
 matrices-tr.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/matrices-tr.h
-grafo-escena.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.h
+materiales-luces.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.h
+cmath
+-
+funciones-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/funciones-aux.h
+clases-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/clases-aux.h
 

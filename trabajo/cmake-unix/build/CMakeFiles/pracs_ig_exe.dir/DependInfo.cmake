@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o"
+  "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o"
   )

@@ -11,6 +11,10 @@
 #include "materiales-luces.h"
 #include "seleccion.h"
 
+//includes necesario a partir de la práctica 3
+#include "modelo-jer.h"
+#include "grafo-escena.h"
+
 
 using namespace std; 
 
@@ -26,6 +30,7 @@ Escena::Escena()
    // COMPLETAR: Práctica 5: hacer 'push_back' de varias camaras perspectiva u ortogonales,
    // (sustituir la cámara orbital simple ('CamaraOrbitalSimple') por varias cámaras de 3 modos ('Camara3Modos')
    camaras.push_back( new CamaraOrbitalSimple() );
+   
 
 }
 // -----------------------------------------------------------------------------------------------
@@ -211,7 +216,7 @@ Escena2::Escena2()
    objetos.push_back( new Cono(2, 15 ));  // sin tapa
    objetos.push_back( new Cono(7, 15 ));  // con tapa
 
-   objetos.push_back( new Esfera(20, 20 ));  // con tapa
+   objetos.push_back( new Esfera(20, 20 ));  
 
    // veamos si está bien costruida las mallas 
    objetos.push_back( new MallaPLY("../recursos/plys/ant.ply") );
@@ -231,6 +236,20 @@ Escena2::Escena2()
 // Añadir la implementación del constructor de la clase Escena3 para construir
 // los objetos que se indican en los guiones de las práctica 3
 // .......
+
+
+Escena3::Escena3() {
+
+  using namespace std ;
+   cout << "Creando objetos de escena 3 .... " << flush ;
+
+  
+   objetos.push_back( new Submarino() );
+
+
+
+   cout << "hecho." << endl << flush ;
+}
 
 
 
