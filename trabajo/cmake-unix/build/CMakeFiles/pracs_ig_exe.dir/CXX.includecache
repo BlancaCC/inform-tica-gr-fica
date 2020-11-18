@@ -128,6 +128,10 @@ matrices-tr.h
 cauce.h
 ../../../trabajo/include/cauce.h
 
+../../../trabajo/include/colores-aux.h
+tuplasg.h
+../../../trabajo/include/tuplasg.h
+
 ../../../trabajo/include/escena.h
 vector
 -
@@ -192,6 +196,14 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp
+ig-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
+matrices-tr.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/matrices-tr.h
+grafo-escena.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.h
+
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
 modelo-jer.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.h
@@ -205,6 +217,8 @@ materiales-luces.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.h
 cmath
 -
+colores-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/colores-aux.h
 funciones-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/funciones-aux.h
 clases-aux.h

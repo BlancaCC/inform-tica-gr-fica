@@ -209,6 +209,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../recursos/include/tuplasg_impl.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/array-verts.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/camara.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/colores-aux.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/escena.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/grafo-escena.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/malla-ind.h

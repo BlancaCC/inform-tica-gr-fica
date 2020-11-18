@@ -38,7 +38,13 @@ class Cuerpo : public NodoGrafoEscena
 {
  public:
   Cuerpo ();
-};  
+};
+
+class Ventana : public NodoGrafoEscena
+{
+public:
+  Ventana(); 
+};
 
 #endif
 

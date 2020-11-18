@@ -87,6 +87,9 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
   // guarda modelview actual
   cv.cauce_act-> pushMM();
 
+  //método para los colores 
+  const Tupla4f color_cauce_previo = leerFijarColVertsCauce(cv); 
+
   //reocrrer todas las entrada del array que hay en el modo
   for( unsigned i = 0; i < entradas.size(); i++ )
     {
@@ -108,6 +111,9 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
 	}
     }
 
+  //restauramso el color del cauce
+
+  glColor4fv(color_cauce_previo); 
   // restauramos el modelview guardada
  cv.cauce_act -> popMM();
 

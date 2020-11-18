@@ -210,6 +210,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
  ../../../recursos/include/tuplasg_impl.h
  ../../../trabajo/include/array-verts.h
  ../../../trabajo/include/camara.h
+ ../../../trabajo/include/colores-aux.h
  ../../../trabajo/include/escena.h
  ../../../trabajo/include/grafo-escena.h
  ../../../trabajo/include/malla-ind.h
