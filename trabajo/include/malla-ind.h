@@ -107,4 +107,12 @@ public:
   CuboColor();
 };
 
+// ____________________  Para práctica 3 submarino ______
+
+class PrismaTrapecio: public MallaInd
+{
+public:
+  PrismaTrapecio();
+};
+
 #endif

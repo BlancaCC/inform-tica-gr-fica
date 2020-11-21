@@ -266,5 +266,51 @@ CuboColor::CuboColor()
 	 col_ver.push_back({ i, j, k } );
 	 
 }
+
+
+//--- objetos para crear el submarino práctica 3
+
+PrismaTrapecio::PrismaTrapecio()
+  :MallaInd( "Prima base de trapecio" )
+{
+
+
+   vertices =
+      {
+	//base inferior
+	{ -2.0, 0.0, -2.0},
+	{ 2.0, 0.0, -2.0},
+	{ -2.0, 0.0, 2.0},
+	{ 2.0, 0.0, 2.0},
+
+	//base superior
+	{ -1.0, 1.0, -1.0},
+	{ 1.0, 1.0, -1.0},
+	{ -1.0, 1.0, 1.0},
+	{ 1.0, 1.0, 1.0},
+      } ;
+
+
+  triangulos =
+    {
+      // X
+      {0,2,1},{2,3,1},     //base inferior
+      {4, 6,5}, {6,7,5},   //base superior
+
+      
+      //Y
+      {0,4,1},{4,5,1},     // frente
+      {2,3,7},{7,6,2},     // trasera
+
+      // Z
+      {1,5,7},{7,3,1},      // derecha
+      {2,6,4},{4,0,2}
+      
+    };
+ 
+}
+
+
+
 // -----------------------------------------------------------------------------------------------
 

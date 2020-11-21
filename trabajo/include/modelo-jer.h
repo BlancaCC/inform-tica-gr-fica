@@ -46,5 +46,23 @@ public:
   Ventana(); 
 };
 
+class Turbina: public NodoGrafoEscena
+{
+public:
+  Turbina(); 
+};
+
+
+class EspigaTurbina: public NodoGrafoEscena
+{
+public:
+  EspigaTurbina(); 
+};
+
+class Aspa: public NodoGrafoEscena
+{
+public: Aspa(); 
+};
+
 #endif
 

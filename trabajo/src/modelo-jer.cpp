@@ -23,7 +23,8 @@ Submarino:: Submarino()
 {
   ponerNombre("Submarinillo");
   //agregar( new Cuerpo() );
-  agregar( new Ventana()); 
+  //agregar( new Ventana());
+  agregar(new Turbina());
 }
 
 
@@ -55,16 +56,52 @@ Ventana :: Ventana ()
 
   // parámetros a ajustar de la ventana
   const int num_verts_per = 4; 
-  const unsigned nperfiles = 20; // para que salga redondo
+  const unsigned nperfiles = 25; // para que salga redondo
 
   
 
-  //luego las giramos 90º sobre el eje
-  //agregar(MAT_Traslacion( 0, -0.5, 0));
-  agregar(MAT_Escalado(1, 2, 1)); 
-  agregar(MAT_Rotacion(45.0, 0.0, 1.0, 0.0 ));
+  agregar(MAT_Rotacion(90.0, 0.0, 0.0, 1.0 ));
+  agregar(MAT_Escalado(0.75,0.5 ,0.75 )); 
   agregar( new Cilindro( num_verts_per, nperfiles));
   ponerColor(azul); 
-  //falta centrar 
   
+  
+}
+
+
+Turbina:: Turbina()
+{
+  agregar( new EspigaTurbina());
+
+  // aspas
+  agregar(MAT_Traslacion( 1.0,0.0, 0.0));
+  for( int i=0; i<3; i++)
+    {
+      agregar(new Aspa());
+      agregar(MAT_Rotacion(360.0/3, 1.0, 0.0, 0.0 ));
+    }
+}
+
+EspigaTurbina:: EspigaTurbina ( )
+{
+  // parámetros a ajustar de la ventana
+  const int num_verts_per = 4; 
+  const unsigned nperfiles = 25; // para que salga redondo
+
+  //tubo turbina 
+  agregar(MAT_Rotacion(270.0, 0.0, 0.0, 1.0 ));
+  agregar(MAT_Escalado(0.1, 1.7  , 0.1 )); 
+  agregar( new Cilindro( num_verts_per, nperfiles));
+  ponerColor( negro);  
+}
+
+
+Aspa::Aspa()
+{
+  ponerColor(marron); 
+  agregar(MAT_Traslacion(0,-1.0, 0)); 
+  agregar(MAT_Escalado(1.0/3.0, 1.0, 0.07/3) ); 
+  agregar(new PrismaTrapecio());
+  ponerColor(marron); 
+ 
 }
