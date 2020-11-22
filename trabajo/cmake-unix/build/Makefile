@@ -628,6 +628,33 @@ home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.s
 .PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.s
 
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.o: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.o
+
+# target to build an object file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.i: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.i
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.i
+
+# target to preprocess a source file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.i
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.i
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.s: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.s
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.s
+
+# target to generate assembly for a file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.s
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -691,6 +718,9 @@ help:
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.o"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.i"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.s"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.o"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.i"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.s"
 .PHONY : help
 
 

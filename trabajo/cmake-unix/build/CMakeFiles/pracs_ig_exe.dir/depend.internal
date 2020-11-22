@@ -219,6 +219,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
  ../../../trabajo/include/modelo-jer.h
  ../../../trabajo/include/objeto3d.h
  ../../../trabajo/include/practicas.h
+ ../../../trabajo/include/trasformaciones-aux.h
  /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o
  ../../../recursos/include/cauce.h
@@ -254,3 +255,10 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
  ../../../trabajo/include/practicas.h
  ../../../trabajo/include/seleccion.h
  /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o
+ ../../../recursos/include/matrices-tr.h
+ ../../../recursos/include/matrizg.h
+ ../../../recursos/include/matrizg_impl.h
+ ../../../recursos/include/tuplasg.h
+ ../../../recursos/include/tuplasg_impl.h
+ /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp

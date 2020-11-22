@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o"
   "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o"
+  "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp" "/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

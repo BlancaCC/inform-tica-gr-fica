@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o"
   "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o"
   "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o"
+  "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o"
   "pracs_ig_exe"
   "pracs_ig_exe.pdb"
 )

@@ -196,6 +196,8 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
+../../../trabajo/include/trasformaciones-aux.h
+
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
 modelo-jer.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.h
@@ -211,8 +213,6 @@ cmath
 -
 colores-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/colores-aux.h
-funciones-aux.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/funciones-aux.h
-clases-aux.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/clases-aux.h
+trasformaciones-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.h
 

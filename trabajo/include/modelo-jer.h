@@ -34,18 +34,34 @@ class Submarino: public NodoGrafoEscena
 
 // ____________ RESTO DE NODOS DEL GRAFO  ________
 
+
+//______CLASES PARA EL CUERPO ________
 class Cuerpo : public NodoGrafoEscena
 {
  public:
   Cuerpo ();
 };
 
+class BaseCuerpo: public NodoGrafoEscena
+{
+public:
+  BaseCuerpo();
+};
+
+  
+class Cabina : public NodoGrafoEscena
+{
+public:
+  Cabina(); 
+};
 class Ventana : public NodoGrafoEscena
 {
 public:
   Ventana(); 
 };
 
+
+// __________ CLASES PARA TURBINA __________
 class Turbina: public NodoGrafoEscena
 {
 public:
@@ -63,6 +79,20 @@ class Aspa: public NodoGrafoEscena
 {
 public: Aspa(); 
 };
+
+class Turbina2: public NodoGrafoEscena
+{
+public: Turbina2();  
+};
+
+
+// _________- mirilla________
+
+class Mirilla: public NodoGrafoEscena
+{
+public: Mirilla();  
+};
+
 
 #endif
 

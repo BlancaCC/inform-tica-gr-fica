@@ -218,6 +218,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/modelo-jer.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/objeto3d.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/practicas.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: ../../../trabajo/include/trasformaciones-aux.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o: ../../../recursos/include/cauce.h
@@ -253,4 +254,11 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o: ../../../trabajo/include/practicas.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o: ../../../trabajo/include/seleccion.h
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp
+
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: ../../../recursos/include/matrices-tr.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: ../../../recursos/include/matrizg.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: ../../../recursos/include/matrizg_impl.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: ../../../recursos/include/tuplasg.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: ../../../recursos/include/tuplasg_impl.h
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp
 
