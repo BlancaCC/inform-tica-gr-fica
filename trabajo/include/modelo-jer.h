@@ -54,10 +54,10 @@ class Cabina : public NodoGrafoEscena
 public:
   Cabina(); 
 };
-class Ventana : public NodoGrafoEscena
+class ParaGolpes : public NodoGrafoEscena
 {
 public:
-  Ventana(); 
+  ParaGolpes(); 
 };
 
 

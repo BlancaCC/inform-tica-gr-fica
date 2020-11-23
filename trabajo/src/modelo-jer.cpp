@@ -20,11 +20,15 @@
 Submarino:: Submarino()
 {
   ponerNombre("Submarinillo");
-  
+
+
   agregar( new Cuerpo());
 
   agregar(MAT_Traslacion( 0.0,-1.0, 0.0)); // con -1 "se oculta, con 1 se muestra
-  agregar(new Mirilla()); 
+  agregar(new Mirilla());
+  agregar(MAT_Traslacion( -2.2,1.2, 0.0));
+  agregar(MAT_Escalado(0.5, 0.5, 0.5)); 
+  agregar(new ParaGolpes()); 
   
 }
 
@@ -76,7 +80,12 @@ Cabina :: Cabina ()
 }
 
 
-
+ParaGolpes :: ParaGolpes()
+{
+  agregar(MAT_Cizalla_yx(0.5));
+  agregar(new Esfera(15, 20));
+  ponerColor(amarillo); 
+}
 
 //_______ TURNINA__________
 Turbina:: Turbina()
@@ -112,7 +121,7 @@ Aspa::Aspa()
   agregar(MAT_Traslacion(0,-1.0, 0)); 
   agregar(MAT_Escalado(1.0/3.0, 1.0, 0.07/3) ); 
   agregar(new PrismaTrapecio());
-  ponerColor(marron); 
+  ponerColor(amarillo); 
  
 }
 
@@ -129,10 +138,11 @@ Turbina2:: Turbina2 ()
 
   agregar(MAT_Escalado(1.2,0.5 ,0.75 )); 
   agregar(MAT_Rotacion(270.0, 0.0, 0.0, 1.0 ));
-  
+  agregar(MAT_Cizalla_yx(0.2)); 
   agregar( new Cilindro( num_verts_per, nperfiles));
   ponerColor(morado);
 
+  agregar(MAT_Cizalla_yx(-0.2)); 
   agregar(MAT_Escalado(0.8, 0.2 ,0.5 ));
   agregar(MAT_Rotacion(90.0, 0.0, 0.0, 1.0 ));
   agregar(MAT_Traslacion( 3.8,0.0, 0.0));
