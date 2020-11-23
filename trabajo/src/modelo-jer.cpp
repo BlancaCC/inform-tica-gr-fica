@@ -20,10 +20,12 @@
 Submarino:: Submarino()
 {
   ponerNombre("Submarinillo");
-  agregar(new Mirilla()); 
-  //agregar( new Cuerpo() );
   
-  //agregar(new Turbina2());
+  agregar( new Cuerpo());
+
+  agregar(MAT_Traslacion( 0.0,-1.0, 0.0)); // con -1 "se oculta, con 1 se muestra
+  agregar(new Mirilla()); 
+  
 }
 
 
@@ -151,14 +153,18 @@ Mirilla:: Mirilla ( )
   const unsigned nperfiles = 25; // para que salga redondo
 
   //tubo vertical
-  agregar(MAT_Escalado(0.1, 1.7  , 0.1 )); 
+  
+  
+  agregar(MAT_Escalado(0.1, 2  , 0.1 ));
   agregar( new Cilindro( num_verts_per, nperfiles));
+  agregar(MAT_Escalado(10.0, 0.5  , 10 ));
 
   //tubo horizontal
-  agregar(MAT_Rotacion(270.0, 0.0, 0.0, 1.0 ));
-  agregar(MAT_Traslacion( 0.0,2.0, 0.0));
+  agregar(MAT_Traslacion( 0.0,1.8, 0.0));
+  agregar(MAT_Rotacion(90.0, 0.0, 0.0, 1.0 ));
+  agregar(MAT_Escalado(0.1, 1.3  , 0.1 ));
   
-  //agregar(MAT_Escalado(1.0, 0.5  , 1.0 ));
-  //agregar( new Cilindro( num_verts_per, nperfiles));
+  agregar( new Cilindro( num_verts_per, nperfiles));
+  
   ponerColor( negro);  
 }
