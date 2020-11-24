@@ -15,20 +15,25 @@ class Submarino: public NodoGrafoEscena
 {
  protected:
   // matrices que le dan movimiento a mi objeto
+
+  // movimientos turbinas 
+  Matriz4f * rotTurbina = nullptr; // matriz asociada al guiro de las turbinas
+  Matriz4f * traslacionCuerpoSubmarino = nullptr; 
+  Matriz4f * movimientoMirilla = nullptr; 
   
-  //Matriz4f * translacion = nullptr;
 
 
-  //void actualizarEstadoParametro( const unsigned iParam, const float t_sec);
+  void actualizarEstadoParametro( const unsigned iParam, const float t_sec);
 
  public:
 
   Submarino();
 
-  //unsigned leerNumParametros() const;
+  unsigned leerNumParametros() const;
 
-  // translaciones 
-  //void fijarTraslacion(const float n_translacion);
+  // animaciones propias  
+  void fijarRotacionTurbina(const float rot_turbina);
+  void fijarMovimientoMirilla( const float vertical, const float giro); 
 };
 
 
@@ -39,8 +44,11 @@ class Submarino: public NodoGrafoEscena
 class Cuerpo : public NodoGrafoEscena
 {
  public:
-  Cuerpo ();
+  Cuerpo ( Matriz4f * & rotTurbina, 
+	   Matriz4f * & traslacionCuerpoSubmarino
+	   );
 };
+
 
 class BaseCuerpo: public NodoGrafoEscena
 {
@@ -65,10 +73,16 @@ public:
 class Turbina: public NodoGrafoEscena
 {
 public:
-  Turbina(); 
+  Turbina( Matriz4f * & rotacion_turbina); 
 };
 
 
+
+class Pareja: public NodoGrafoEscena
+{
+  public:
+  Pareja( Matriz4f * & rotacion_turbina); 
+}; 
 class EspigaTurbina: public NodoGrafoEscena
 {
 public:
@@ -80,9 +94,9 @@ class Aspa: public NodoGrafoEscena
 public: Aspa(); 
 };
 
-class Turbina2: public NodoGrafoEscena
+class CamaraTurbina: public NodoGrafoEscena
 {
-public: Turbina2();  
+public: CamaraTurbina( Objeto3D * & turbina);  
 };
 
 
@@ -90,7 +104,7 @@ public: Turbina2();
 
 class Mirilla: public NodoGrafoEscena
 {
-public: Mirilla();  
+public: Mirilla( Matriz4f * & movimientoMirilla);  
 };
 
 

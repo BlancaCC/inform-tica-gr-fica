@@ -164,6 +164,8 @@ void FGE_PulsarLevantarTecla( GLFWwindow* window, int key, int scancode, int act
       // del objeto actual ('objeto'), se debe usar 'ProcesarTeclaAnimacion' si devuelve
       // 'true', forzar revisualizar escena (asignando valor a 'revisualizar_escena')
 
+     if(ProcesarTeclaAnimacion(objeto, key))
+       revisualizar_escena = true; 
       return ; // finalizar la f.g.e, ya que si está la tecla A pulsada no se mira ninguna otra tecla.
    }
 
@@ -487,6 +489,8 @@ void BucleEventosGLFW()
          revisualizar_escena = false; //    evitar que se redibuje continuamente
       }
 
+      
+
       // hay una animación en curso si están las animaciones activdas por el usuario y
       // además el objeto actual tiene al menos un parámetro animable
       Objeto3D * objeto = escenas[ind_escena_act]->objetoActual() ; assert( objeto != nullptr );
@@ -504,6 +508,9 @@ void BucleEventosGLFW()
       // actualizar 'terminar_programa' si GLFW indica que se debe cerrar la ventana
       terminar_programa = terminar_programa || glfwWindowShouldClose( ventana_glfw ) ;
    }
+
+
+   
 
 }
 // ---------------------------------------------------------------------
