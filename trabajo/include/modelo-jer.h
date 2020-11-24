@@ -34,6 +34,7 @@ class Submarino: public NodoGrafoEscena
   // animaciones propias  
   void fijarRotacionTurbina(const float rot_turbina);
   void fijarMovimientoMirilla( const float vertical, const float giro); 
+  void fijarMovimientoSubmarino(const float k); 
 };
 
 
@@ -44,9 +45,7 @@ class Submarino: public NodoGrafoEscena
 class Cuerpo : public NodoGrafoEscena
 {
  public:
-  Cuerpo ( Matriz4f * & rotTurbina, 
-	   Matriz4f * & traslacionCuerpoSubmarino
-	   );
+  Cuerpo ( Matriz4f * & rotTurbina);
 };
 
 
@@ -102,9 +101,15 @@ public: CamaraTurbina( Objeto3D * & turbina);
 
 // _________- mirilla________
 
+
+class MirillaAnimada: public NodoGrafoEscena
+{
+public: MirillaAnimada( Matriz4f * & movimientoMirilla); 
+}; 
+
 class Mirilla: public NodoGrafoEscena
 {
-public: Mirilla( Matriz4f * & movimientoMirilla);  
+public: Mirilla();  
 };
 
 

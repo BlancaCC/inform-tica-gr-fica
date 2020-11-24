@@ -20,7 +20,7 @@
 unsigned Submarino :: leerNumParametros() const
 {
   // número de grado de libertad 
-  return 1; 
+  return 3; 
 }
 
 void Submarino::fijarRotacionTurbina( const float rot_turbina)
@@ -33,9 +33,19 @@ void Submarino::fijarRotacionTurbina( const float rot_turbina)
 void Submarino::fijarMovimientoMirilla( const float vertical, const float giro)
 {
 
-  * rotTurbina = MAT_Rotacion( giro, 1.0, 0.0, 0.0)*
-                 MAT_Traslacion( 0.0, 2*sin(vertical), 0.0); 
+  * movimientoMirilla  = MAT_Rotacion( giro, 0.0, 1.0, 0.0)*
+    MAT_Traslacion( 0.0, 1.2+1.5*sin(vertical), 0.0); 
     
+}
+
+void Submarino::fijarMovimientoSubmarino( const float t)
+{
+  /**
+  * traslacionCuerpoSubmarino = MAT_Rotacion(-360*sin(0.04*t),0.0, 1.0, 0.0 )*
+    MAT_Traslacion( -6*sin(0.2*t), 2*sin(0.05*t), 2.5*cos(0.075*t) );
+  */
+
+   * traslacionCuerpoSubmarino = MAT_Traslacion( 3*-sin(0.2*t), 0.0, 3*cos(M_PI/2+0.4*t) ) *MAT_Rotacion(360*sin(0.08*t),0.0, 1.0, 0.0 ) ;
 }
 
 void Submarino :: actualizarEstadoParametro ( const unsigned iParam, const float t_sec )
@@ -49,8 +59,13 @@ void Submarino :: actualizarEstadoParametro ( const unsigned iParam, const float
       break;
 
     case 1:
-      fijarMovimientoMirilla(t_sec, 2*t_sec);
+      fijarMovimientoMirilla(0.2*t_sec, 20*t_sec);
+      break;
+
+    case 2:
+      fijarMovimientoSubmarino( t_sec);
       break; 
+      
     }
 }
 // _______ clase raíz ________
@@ -58,24 +73,29 @@ void Submarino :: actualizarEstadoParametro ( const unsigned iParam, const float
 Submarino:: Submarino()
 {
   ponerNombre("Submarinillo");
-
-  agregar(MAT_Escalado(0.6, 0.6, 0.6)); 
-  agregar( new Cuerpo(rotTurbina,
-	   traslacionCuerpoSubmarino));
-
-  agregar(MAT_Traslacion( 0.0,-1.0, 0.0)); // con -1 "se oculta, con 1 se muestra
-  agregar(new Mirilla( movimientoMirilla ));
   
+  // animación de movimiento del cuerpo general
+  unsigned indice = agregar (MAT_Ident()); 
+
+  // cuerpo general
+  agregar(MAT_Escalado(0.6, 0.6, 0.6)); 
+  agregar( new Cuerpo(rotTurbina));
+
+  //mirilla
+  agregar(MAT_Traslacion( 0.0,-1.0, 0.0)); // con -1 "se oculta, con 1 se muestra
+  agregar(new MirillaAnimada( movimientoMirilla ));
+
+  //para golpes
   agregar(MAT_Traslacion( -2.2,1.2, 0.0));
   agregar(MAT_Escalado(0.5, 0.5, 0.5)); 
   agregar(new ParaGolpes()); 
+
+  traslacionCuerpoSubmarino = leerPtrMatriz(indice);  
   
 }
 
 
-Cuerpo :: Cuerpo(Matriz4f * & rotTurbina,
-	   Matriz4f * & traslacionCuerpoSubmarino
-		 )
+Cuerpo :: Cuerpo(Matriz4f * & rotTurbina )
 {
 
   Objeto3D * inst_turbina = new Turbina(rotTurbina);
@@ -135,23 +155,6 @@ ParaGolpes :: ParaGolpes()
 }
 
 //_______ TURNINA__________
-
-Pareja :: Pareja(Matriz4f * & rotacion_turbina) {
-
-  
-
-  Objeto3D * inst_turbina = new Turbina(rotacion_turbina); 
-   
-  
-
-  agregar ( inst_turbina); 
-  agregar(MAT_Traslacion( 0.0, 0.0, 3.0));
-  agregar ( inst_turbina); 
-  
-  
-  
-  
-}
 
 
 
@@ -223,8 +226,14 @@ CamaraTurbina:: CamaraTurbina ( Objeto3D * & turbina)
 // ________ FIN TURBINA 
 
 
+MirillaAnimada:: MirillaAnimada(Matriz4f * & movimientoMirilla )
+{
+  unsigned ind = agregar(MAT_Ident());
+  agregar(new Mirilla());
 
-Mirilla:: Mirilla ( Matriz4f * & movimientoMirilla )
+  movimientoMirilla = leerPtrMatriz(ind);
+}
+Mirilla:: Mirilla ( )
 {
   // parámetros a ajustar de la ventana
   const int num_verts_per = 4; 
@@ -240,7 +249,7 @@ Mirilla:: Mirilla ( Matriz4f * & movimientoMirilla )
   //tubo horizontal
   agregar(MAT_Traslacion( 0.0,1.8, 0.0));
   agregar(MAT_Rotacion(90.0, 0.0, 0.0, 1.0 ));
-  agregar(MAT_Escalado(0.1, 1.3  , 0.1 ));
+  agregar(MAT_Escalado(0.1, 0.8  , 0.1 ));
   
   agregar( new Cilindro( num_verts_per, nperfiles));
   
