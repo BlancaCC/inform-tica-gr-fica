@@ -25,6 +25,9 @@ class Submarino: public NodoGrafoEscena
 
   void actualizarEstadoParametro( const unsigned iParam, const float t_sec);
 
+  //funcion auxiliar para calcular ángulo de giro del submarino
+  float calculaAnguloSubmarino( const float x, const float z, const float t); 
+
  public:
 
   Submarino();
