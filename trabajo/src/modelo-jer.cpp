@@ -37,33 +37,48 @@ void Submarino::fijarMovimientoMirilla( const float vertical, const float giro)
     MAT_Traslacion( 0.0, 1.2+1.5*sin(vertical), 0.0); 
     
 }
-float Submarino::calculaAnguloSubmarino( const float x, const float z, const float t)
+int Submarino::calculaAnguloSubmarino( const float x)
 {
-  float angulo = 0;
-  int mi_t = t*360; 
-  
-  if( 0 <= z && z<= M_PI/2 && 0 <= x && x <= M_PI/4)
-    angulo = 90.0 - (mi_t % 360);
-  else if( M_PI/2 < z && z<= M_PI && M_PI/4 < x && x <= M_PI/2)
-    angulo = 90.0 -(mi_t % 360);
+  int angulo = 1;
+  //std::cout << acos(cos(x))+M_PI/2 << " contador \n"; 
+  if (acos(cos(x))+M_PI/2 < 2 ) // error de valer 0
+    {
 
+      if (cambiado == true) {
+	contador_eje = (contador_eje+ 1)%4; 
+	cambiado = false;
+	std::cout << contador_eje << " contador \n"; 
+      }
+    }
+  else {
+    cambiado = true;
+
+  if (contador_eje%2>1)
+    angulo = -1;
+  }
+
+  
   return angulo; 
 }
 void Submarino::fijarMovimientoSubmarino( const float t)
 {
   
   float x = 0.2*t;
-  float z = 0.4*t; 
+  float z = 0.4*t;
+  //x = z; 
   /**
   * traslacionCuerpoSubmarino = MAT_Rotacion(-360*sin(0.04*t),0.0, 1.0, 0.0 )*
     MAT_Traslacion( -6*sin(0.2*t), 2*sin(0.05*t), 2.5*cos(0.075*t) );
   */
 
    //* traslacionCuerpoSubmarino = MAT_Traslacion( 3*-sin(0.2*t), 0.0, 3*cos(M_PI/2+0.4*t) ) *MAT_Rotacion(360*sin(0.08*t),0.0, 1.0, 0.0 ) ;
-  
-  * traslacionCuerpoSubmarino = MAT_Rotacion(
-		      calculaAnguloSubmarino(x, z, t),0.0, 1.0, 0.0 ) *
-    MAT_Traslacion( 3*cos(x), 0.0, 3*sin(z) );
+
+  int signo = calculaAnguloSubmarino( z);
+  * traslacionCuerpoSubmarino =  MAT_Traslacion( 3*cos(x), 0.0, 3*sin(z) ) *
+                                 MAT_Rotacion(
+					      90*(1-signo) +((asin(     cos(z)   ))/(2*M_PI)*360) *signo
+					      ,0.0, 1.0, 0.0 ) 
+					    ;
 }
 
 void Submarino :: actualizarEstadoParametro ( const unsigned iParam, const float t_sec )
