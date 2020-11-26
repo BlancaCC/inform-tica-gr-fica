@@ -28,7 +28,7 @@ class Submarino: public NodoGrafoEscena
   //funcion auxiliar para calcular ángulo de giro del submarino
   int contador_eje = 0;
   bool cambiado = true; 
-  bool  calculaAnguloSubmarino( const float z); 
+  
 
  public:
 

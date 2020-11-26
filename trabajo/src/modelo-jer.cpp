@@ -37,38 +37,19 @@ void Submarino::fijarMovimientoMirilla( const float vertical, const float giro)
     MAT_Traslacion( 0.0, 1.2+1.5*sin(vertical), 0.0); 
     
 }
-bool Submarino::calculaAnguloSubmarino( const float z)
-{
-  bool  angulo = true;
-  //std::cout << acos(cos(x))+M_PI/2 << " contador \n"; 
-  if (abs(z) < 0.1 ) // error de valer 0
-    {
 
-      if (cambiado == true) {
-	contador_eje = (contador_eje+ 1)%4; 
-	cambiado = false;
-	std::cout << contador_eje << " contador \n"; 
-      }
-    }
-  else {
-    cambiado = true;
-
-  if (contador_eje%2>1)
-    angulo = false;
-  }
-
-  
-  return angulo; 
-}
 void Submarino::fijarMovimientoSubmarino( const float t)
 {
-  
+
+  // velocidades de cambio
   float x = 0.4*t;
   float z = 0.8*t;
+  float y = 0.2*t;  
 
-  float coord_x = 3*cos(x);
-  float coord_y = 3*sin(z);
-  float angulo = (asin(     cos(z))/(2*M_PI)*360);  
+  float coord_x = 5*cos(x);
+  float coord_z = 5*sin(z);
+  float coord_y = sin (y); 
+  float angulo = (asin(  cos(z))/(2*M_PI)*360);  
 
   //ajuste angúlo por multiplicidad de soluciones
   
@@ -80,16 +61,25 @@ void Submarino::fijarMovimientoSubmarino( const float t)
 	std::cout << contador_eje << std:: endl; 
       }
     
+    if(contador_eje% 2 == 0 ) { // para corregir ligeramente la brusquedad
+	
+      angulo = 90;
+    }
+    else
+      angulo = -90; 
+    
   }
   else
-    cambiado = false;
+    {
+      cambiado = false;
 
-  if(contador_eje>1) {
-    angulo = 180-angulo; 
+      if(contador_eje>1) {
+	angulo = 180-angulo;
+      }
   }
 
   
-  * traslacionCuerpoSubmarino =  MAT_Traslacion( coord_x, 0.0, coord_y ) *
+  * traslacionCuerpoSubmarino =  MAT_Traslacion( coord_x, coord_y, coord_z ) *
     MAT_Rotacion(
 		 angulo 
 		 ,0.0, 1.0, 0.0 ) 
