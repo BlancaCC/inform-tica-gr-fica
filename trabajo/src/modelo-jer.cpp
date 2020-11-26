@@ -37,11 +37,11 @@ void Submarino::fijarMovimientoMirilla( const float vertical, const float giro)
     MAT_Traslacion( 0.0, 1.2+1.5*sin(vertical), 0.0); 
     
 }
-int Submarino::calculaAnguloSubmarino( const float x)
+bool Submarino::calculaAnguloSubmarino( const float z)
 {
-  int angulo = 1;
+  bool  angulo = true;
   //std::cout << acos(cos(x))+M_PI/2 << " contador \n"; 
-  if (acos(cos(x))+M_PI/2 < 2 ) // error de valer 0
+  if (abs(z) < 0.1 ) // error de valer 0
     {
 
       if (cambiado == true) {
@@ -54,7 +54,7 @@ int Submarino::calculaAnguloSubmarino( const float x)
     cambiado = true;
 
   if (contador_eje%2>1)
-    angulo = -1;
+    angulo = false;
   }
 
   
@@ -63,22 +63,39 @@ int Submarino::calculaAnguloSubmarino( const float x)
 void Submarino::fijarMovimientoSubmarino( const float t)
 {
   
-  float x = 0.2*t;
-  float z = 0.4*t;
-  //x = z; 
-  /**
-  * traslacionCuerpoSubmarino = MAT_Rotacion(-360*sin(0.04*t),0.0, 1.0, 0.0 )*
-    MAT_Traslacion( -6*sin(0.2*t), 2*sin(0.05*t), 2.5*cos(0.075*t) );
-  */
+  float x = 0.4*t;
+  float z = 0.8*t;
 
-   //* traslacionCuerpoSubmarino = MAT_Traslacion( 3*-sin(0.2*t), 0.0, 3*cos(M_PI/2+0.4*t) ) *MAT_Rotacion(360*sin(0.08*t),0.0, 1.0, 0.0 ) ;
+  float coord_x = 3*cos(x);
+  float coord_y = 3*sin(z);
+  float angulo = (asin(     cos(z))/(2*M_PI)*360);  
 
-  int signo = calculaAnguloSubmarino( z);
-  * traslacionCuerpoSubmarino =  MAT_Traslacion( 3*cos(x), 0.0, 3*sin(z) ) *
-                                 MAT_Rotacion(
-					      90*(1-signo) +((asin(     cos(z)   ))/(2*M_PI)*360) *signo
-					      ,0.0, 1.0, 0.0 ) 
-					    ;
+  //ajuste angúlo por multiplicidad de soluciones
+  
+  if( abs(3*sin(z)) < 0.01) {
+    if (cambiado == false)
+      {
+	cambiado = true; 
+	contador_eje = (contador_eje +1)%4;
+	std::cout << contador_eje << std:: endl; 
+      }
+    
+  }
+  else
+    cambiado = false;
+
+  if(contador_eje>1) {
+    angulo = 180-angulo; 
+  }
+
+  
+  * traslacionCuerpoSubmarino =  MAT_Traslacion( coord_x, 0.0, coord_y ) *
+    MAT_Rotacion(
+		 angulo 
+		 ,0.0, 1.0, 0.0 ) 
+    ;
+ 
+  		    
 }
 
 void Submarino :: actualizarEstadoParametro ( const unsigned iParam, const float t_sec )
