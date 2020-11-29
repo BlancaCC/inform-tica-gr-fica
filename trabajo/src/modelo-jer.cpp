@@ -1,3 +1,4 @@
+// Nombre: Blanca , Apellidos: Cano Camarero, DNI/Pasaporte:75577392J (DDGG IG curso 20-21)
 /**
    Fichero: modelo-jer.cpp 
    Autora: Blanca cano Camarero 
@@ -58,7 +59,7 @@ void Submarino::fijarMovimientoSubmarino( const float t)
       {
 	cambiado = true; 
 	contador_eje = (contador_eje +1)%4;
-	std::cout << contador_eje << std:: endl; 
+
       }
     
     if(contador_eje% 2 == 0 ) { // para corregir ligeramente la brusquedad
@@ -115,7 +116,7 @@ Submarino:: Submarino()
   ponerNombre("Submarinillo");
   
   // animación de movimiento del cuerpo general
-  unsigned indice = agregar (MAT_Ident()); 
+  unsigned indice = agregar(MAT_Traslacion(6,0,0) * MAT_Rotacion(90, 0,1,0)); 
 
   // cuerpo general
   agregar(MAT_Escalado(0.6, 0.6, 0.6)); 
@@ -230,7 +231,7 @@ EspigaTurbina:: EspigaTurbina ( )
 
 Aspa::Aspa()
 {
-  ponerColor(marron); 
+  
   agregar(MAT_Traslacion(0,-1.0, 0)); 
   agregar(MAT_Escalado(1.0/3.0, 1.0, 0.07/3) ); 
   agregar(new PrismaTrapecio());
