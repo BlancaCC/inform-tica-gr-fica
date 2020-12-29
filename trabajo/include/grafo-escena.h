@@ -101,6 +101,13 @@ class NodoGrafoEscena : public Objeto3D
 
 } ;
 
+// PRÁCTICA 4
+class NodoCubo : public NodoGrafoEscena 
+{
+   public:
+   NodoCubo();
+};
+
 #endif // GRAFO_ESCENA_HPP
 
 // *********************************************************************

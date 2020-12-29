@@ -261,7 +261,18 @@ Escena3::Escena3() {
 // .......
 
 
+Escena4::Escena4() {
 
+  using namespace std ;
+   cout << "Creando objetos de escena 4 .... " << flush ;
+
+  
+   objetos.push_back( new NodoCubo() );
+
+
+
+   cout << "hecho." << endl << flush ;
+}
 // ----------------------------------------------------------------------
 // COMPLETAR: Práctica 5
 // Añadir la implementación del constructor de la clase Escena5 para construir

@@ -23,6 +23,7 @@
 #include "matrices-tr.h"
 #include "grafo-escena.h"
 
+#include "malla-ind.h"
 using namespace std ;
 
 // *********************************************************************
@@ -247,4 +248,14 @@ bool NodoGrafoEscena::buscarObjeto
 
    // ni este nodo ni ningún hijo es el buscado: terminar
    return false ;
+}
+
+
+// PRÁCTICA 4
+NodoCubo::NodoCubo() 
+{
+  //falta añadir las texturas y tal 
+  agregar(new Cubo24());
+
+  ponerNombre("cubo 24 vértices");
 }

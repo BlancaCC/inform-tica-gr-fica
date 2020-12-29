@@ -1,3 +1,4 @@
+
 // Nombre: Blanca , Apellidos: Cano Camarero, DNI/Pasaporte:75577392J (DDGG IG curso 20-21)
 // *********************************************************************
 // **
@@ -117,6 +118,13 @@ public:
   Escena3();
 };
 
+
+
+class Escena4 : public Escena
+{
+public:
+  Escena4();
+};
 
 // -------------
 

@@ -50,6 +50,28 @@ void MallaInd::calcularNormalesTriangulos()
    // COMPLETAR: Práctica 4: creación de la tabla de normales de triángulos
    // ....
 
+   Tupla3f p,q,r,s,t, normal_sin_normalizar;
+
+   for( unsigned int i=0; i< triangulos.size(); i++)
+     {
+       p = vertices[triangulos[i](0)];
+       q = vertices[ triangulos[i](1)];
+       r = vertices[triangulos[i](2)];
+
+       s = q-p;
+       t = r-q;
+
+       normal_sin_normalizar = s.cross(t);
+
+       if( normal_sin_normalizar.lengthSq() > 0)
+          nor_tri.push_back(normal_sin_normalizar.normalized());
+
+       else 
+        nor_tri.push_back({0,0,0});
+     }
+
+   
+
 }
 
 
@@ -62,7 +84,21 @@ void MallaInd::calcularNormales()
    // se debe invocar en primer lugar 'calcularNormalesTriangulos'
    // .......
 
+  calcularNormalesTriangulos(); 
 
+  nor_ver.insert( nor_ver.begin(), vertices.size(), {0.0, 0.0,  0.0});
+
+  for(unsigned int i = 0; i<triangulos.size(); i++)
+  {
+        nor_ver[triangulos[i](0)]=nor_ver[triangulos[i](0)]+nor_tri[i];
+        nor_ver[triangulos[i](1)]=nor_ver[triangulos[i](1)]+nor_tri[i];
+        nor_ver[triangulos[i](2)]=nor_ver[triangulos[i](2)]+nor_tri[i];
+  }
+  for(unsigned int i = 0; i<vertices.size(); i++)
+  {
+    if(nor_ver[i].lengthSq()>0)
+      nor_ver[i]=nor_ver[i].normalized();
+   }
 }
 
 
@@ -169,11 +205,13 @@ MallaPLY::MallaPLY( const std::string & nombre_arch )
 
 
    // COMPLETAR: práctica 4: invocar  a 'calcularNormales' para el cálculo de normales
+
+   calcularNormales();
    // .................
 
 
-
 }
+
 
 // ****************************************************************************
 // Clase 'Cubo
@@ -310,6 +348,58 @@ PrismaTrapecio::PrismaTrapecio()
     };
  
 }
+// PRÁCTICA 4
+
+
+Cubo24 :: Cubo24(){
+   vertices = {
+      {-1.0,-1.0,-1.0}, {-1.0,-1.0,1.0},
+      {1.0,-1.0,-1.0}, {1.0,-1.0,1.0},
+      
+      {-1.0,1.0,-1.0}, {-1.0,1.0,1.0},
+      {1.0,1.0,-1.0}, {1.0,1.0,1.0},
+
+      {-1.0,1.0,1.0},{1.0,1.0,1.0},
+      {-1.0,-1.0,1.0},{1.0,-1.0,1.0},
+
+      {-1.0,1.0,-1.0},{1.0,1.0,-1.0},
+      {-1.0,-1.0,-1.0},{1.0,-1.0,-1.0},
+
+      {-1.0,1.0,-1.0},{-1.0,1.0,1.0},        
+      {-1.0,-1.0,-1.0},{-1.0,-1.0,1.0},
+
+      {1.0,1.0,-1.0},{1.0,1.0,1.0},
+      {1.0,-1.0,-1.0},{1.0,-1.0,1.0} 
+   };
+
+   triangulos = {
+      {0,2,1},{3,1,2},
+      {4,5,6},{7,6,5},
+      {9,8,10},{9,10,11},
+      {13,14,12},{13,15,14},
+      {17,16,18},{17,18,19},
+      {21,20,22},{21,23,22}
+
+   };
+
+   cc_tt_ver = {
+      {0.0, 1.0},{0.0, 0.0},
+      {1.0,1.0},{1.0,0.0},
+      {0.0, 0.0},{0.0, 1.0},
+      {1.0,0.0},{1.0,1.0},
+      {0.0,0.0},{1.0,0.0},
+      {0.0,1.0},{1.0,1.0},
+      {1.0,0.0},{0.0,0.0},
+      {1.0,1.0},{0.0,1.0},
+      {0.0,0.0},{1.0,0.0},
+      {0.0,1.0},{1.0,1.0},
+      {1.0,0.0},{0.0,0.0},
+      {1.0,1.0},{0.0,1.0},
+   };
+
+   calcularNormales();
+}
+
 
 
 
