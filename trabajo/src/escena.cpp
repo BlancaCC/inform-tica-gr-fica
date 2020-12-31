@@ -25,6 +25,9 @@ using namespace std;
 Escena::Escena()
 {
    // COMPLETAR: Práctica 4: inicializar 'col_fuentes' y 'material_ini'
+   col_fuentes = new Col2Fuentes();
+   material_ini = new Material(0.1,0.5,0.4,20);
+   
    // ...
 
 
@@ -96,6 +99,13 @@ void Escena::visualizarGL( ContextoVis & cv )
       // * habilitar evaluación del MIL en el cauce (fijarEvalMIL)
       // * activar la colección de fuentes de la escena
       // * activar el material inicial
+      cauce->fijarEvalMIL(true);
+      col_fuentes->activar(*cauce);
+      if(material_ini!=nullptr)
+      {
+         cv.material_act = material_ini;
+         material_ini->activar(*cauce);
+      }
       // ....
 
    }

@@ -104,11 +104,18 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
 	    case TipoEntNGE::transformacion:
 	      cv.cauce_act -> compMM( *(entradas[i].matriz));
 	      break;
+      case TipoEntNGE::material:
+         if(cv.iluminacion && !cv.modo_seleccion){
+            cv.material_act = entradas[i].material;
+            cv.material_act->activar(*cv.cauce_act);
+         }
+         break;
 
 	      default:
-		cout << "Error" << endl;
-		exit(-1);
-		break; 
+         
+		   cout << "Error tipo no definido en NodoGrafoEscena::visualizarGL" << endl;
+		   exit(-1);
+		   break; 
 		
 	}
     }
@@ -254,7 +261,12 @@ bool NodoGrafoEscena::buscarObjeto
 // PRÁCTICA 4
 NodoCubo::NodoCubo() 
 {
-  //falta añadir las texturas y tal 
+  
+  Textura* text_ugr = new Textura("../recursos/imgs/window-icon.jpg");
+
+  Material* material = new Material(text_ugr,0.2, 0.4, 0.4, 20);
+  
+  agregar(material);
   agregar(new Cubo24());
 
   ponerNombre("cubo 24 vértices");

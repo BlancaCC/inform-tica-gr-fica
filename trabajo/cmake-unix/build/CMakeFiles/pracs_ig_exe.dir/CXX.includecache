@@ -116,11 +116,9 @@ tuplasg_impl.h
 
 ../../../recursos/include/tuplasg_impl.h
 
-../../../trabajo/include/animacion.h
-objeto3d.h
-../../../trabajo/include/objeto3d.h
-practicas.h
-../../../trabajo/include/practicas.h
+../../../trabajo/include/array-verts.h
+ig-aux.h
+-
 
 ../../../trabajo/include/camara.h
 tuplasg.h
@@ -135,6 +133,22 @@ vector
 -
 practicas.h
 ../../../trabajo/include/practicas.h
+
+../../../trabajo/include/grafo-escena.h
+matrices-tr.h
+../../../trabajo/include/matrices-tr.h
+objeto3d.h
+../../../trabajo/include/objeto3d.h
+materiales-luces.h
+../../../trabajo/include/materiales-luces.h
+
+../../../trabajo/include/malla-ind.h
+vector
+-
+objeto3d.h
+../../../trabajo/include/objeto3d.h
+array-verts.h
+../../../trabajo/include/array-verts.h
 
 ../../../trabajo/include/materiales-luces.h
 vector
@@ -166,23 +180,13 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
-../../../trabajo/include/seleccion.h
-objeto3d.h
-../../../trabajo/include/objeto3d.h
-practicas.h
-../../../trabajo/include/practicas.h
-escena.h
-../../../trabajo/include/escena.h
-
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp
 ig-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
-camara.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.h
-practicas.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/practicas.h
-seleccion.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.h
-animacion.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/animacion.h
+matrices-tr.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/matrices-tr.h
+grafo-escena.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.h
+malla-ind.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.h
 
