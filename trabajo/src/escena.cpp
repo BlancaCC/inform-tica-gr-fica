@@ -26,7 +26,7 @@ Escena::Escena()
 {
    // COMPLETAR: Práctica 4: inicializar 'col_fuentes' y 'material_ini'
    col_fuentes = new Col2Fuentes();
-   material_ini = new Material(0.1,0.5,0.4,20);
+   material_ini = new Material(0.5,0.8,1.5,20);
    
    // ...
 
