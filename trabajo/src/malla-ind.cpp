@@ -22,7 +22,7 @@
 MallaInd::MallaInd()
 {
    // nombre por defecto
-   ponerNombre("malla indexada, anónima");
+   ponerNombre("Malla indexada, anónima");
 }
 // -----------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ void MallaInd::calcularNormalesTriangulos()
    for( unsigned int i=0; i< triangulos.size(); i++)
      {
        p = vertices[triangulos[i](0)];
-       q = vertices[ triangulos[i](1)];
+       q = vertices[triangulos[i](1)];
        r = vertices[triangulos[i](2)];
 
        s = q-p;
@@ -388,6 +388,8 @@ PrismaTrapecio::PrismaTrapecio()
 
 
 Cubo24 :: Cubo24(){
+
+  /**
    vertices = {
       {-1.0,-1.0,-1.0}, {-1.0,-1.0,1.0},
       {1.0,-1.0,-1.0}, {1.0,-1.0,1.0},
@@ -433,6 +435,67 @@ Cubo24 :: Cubo24(){
       {1.0,1.0},{0.0,1.0},
    };
 
+  */
+
+  vertices = {
+    //cara inferior  Y- (desde la esquina inferio, sentido horario)
+    {-1,-1,-1}, {-1,-1,1}, {1,-1,1}, {1,-1,-1}, // [0,3] y=-1
+    
+    //cara superior Y+
+    {-1,1,-1},  {-1,1,1},  {1,1,1},  {1,1,-1}, //[4,7]   y=+1
+
+    // cara de enfrente Z = -1
+    {-1,-1,-1}, {-1,1,-1}, {1,1,-1}, {1,-1,-1}, // [8,11]
+
+    // cara Z = +1
+    {1,-1,1}, {1,1,1}, {-1,1,1}, {-1,-1,1}, //  [12,15]
+
+    // X+
+    {1,-1,-1}, {1,1,-1}, {1,1,1}, {1,-1,1}, // [16, 19]
+
+    // X-
+    {-1,-1,1}, {-1,1,1}, {-1,1,-1}, {-1,-1,-1} // [20, 23]
+  };
+
+  triangulos = {
+    //cara inferior
+    {0,3,1},{1,3,2},
+
+    //cara superior
+    {4,5,7},{5,6,7},
+
+    // cara de enfrente
+    {8,9,11},{9,10,11},
+
+    //Z+
+    {12, 13,15}, {13, 14, 15},
+
+    //X+
+    {16,17,19}, {17,18,19},
+
+    //X-
+    {20, 21, 22}, {20,22,23}
+  };
+
+   cc_tt_ver = {
+     //cara inferior
+     {1,1},{1,0},{0,0},{0,1},
+     //cara superior
+     {0,0},{0,1},{1,1},{1,0},
+
+     //cara enfrente
+     {0,0},{0,1},{1,1},{1,0},
+
+      // Z+
+     {1,1},{1,0}, {0,0}, {0,1},
+
+      //x+
+     {1,1},{1,0},{0,0},{0,1},
+
+     //X-
+     {1,1},{1,0},{0,0},{0,1}
+     
+   };
    calcularNormales();
 }
 

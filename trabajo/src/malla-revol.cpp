@@ -27,6 +27,58 @@ void MallaRevol::inicializar
  const unsigned               num_copias  // número de copias del perfil
  )
 {
+
+  //práctica 4: CÁLCULO DE NORMALES
+
+
+  std::vector<Tupla3f> normalesAristas, vertsAux;
+   Tupla3f normal, aux;
+   for(unsigned i = 0; i<perfil.size()-1; i++)
+     {
+
+      aux = (perfil[i+1]-perfil[i]);
+      normal(0)=aux(1);
+      normal(1)=-aux(0);
+      normal(2)=0;
+      if(normal.lengthSq()>0)
+         normalesAristas.push_back(normal.normalized());
+      else
+         normalesAristas.push_back(normal);
+      
+   }
+
+   nor_ver.insert(nor_ver.begin(), perfil.size(), {0.0, 0.0 , 0.0});
+   if(normalesAristas[0].lengthSq()!=0)
+     nor_ver[0]=normalesAristas[0].normalized();
+   
+   for(unsigned i=1; i<perfil.size()-1; i++)
+     {
+       nor_ver[i]=normalesAristas[i]+normalesAristas[i-1];
+       if(nor_ver[i].lengthSq()!=0)
+         nor_ver[i]=nor_ver[i].normalized();
+     }
+
+   if(normalesAristas[perfil.size()-2].lengthSq()!=0)
+     nor_ver[perfil.size()-1]=normalesAristas[perfil.size()-2];
+
+
+   // __- normales textura ___ 
+
+
+   std::vector<float> d, t;
+   float den=0;
+   for(unsigned int i = 0; i<perfil.size()-1; i++)
+     {
+      d.push_back(sqrt((perfil[i+1]-perfil[i]).lengthSq()));
+      den += d[i];
+   }
+   t.push_back(0);
+   for(unsigned int i = 1; i<perfil.size(); i++)
+      t.push_back(t[i-1]+d[i-1]/den);
+
+
+   
+  
   // COMPLETAR: Práctica 2: completar: creación de la malla....
   
 
@@ -47,13 +99,13 @@ void MallaRevol::inicializar
     {
       matriz_rotacion = MAT_Rotacion( (360.0 * i) / (num_copias-1), 0.0, 1.0, 0.0); 
       for( int j=0; j< num_vertices ; j++) // numéro de vértices en el perfil
-	{
-	  q = matriz_rotacion * perfil[j];
-	  vertices.push_back(q); 
+        {
+          q = matriz_rotacion * perfil[j];
+          vertices.push_back(q); 
 	  
-	  // hay que obtener el vértice q rotando p_j un ángulo de 2pi * i /(n-1)
+          // hay que obtener el vértice q rotando p_j un ángulo de 2pi * i /(n-1)
 	  
-	}
+        }
     }
   
   //segundo crear TABLA DE TRIÁNGULOS
@@ -61,14 +113,14 @@ void MallaRevol::inicializar
   for(unsigned  int i = 0; i< (num_copias-1); i++)
     {
       for( int j = 0; j< (num_vertices-1); j++)
-	{
-	  k = i*num_vertices + j;      // índice de cierto vértice en tabla de vértices
+        {
+          k = i*num_vertices + j;      // índice de cierto vértice en tabla de vértices
 
-	  // creamos cuadrado 
-	  triangulos.push_back({k, k+num_vertices, k+num_vertices+1}); // x, x siguiente instancia y el de abajo de x
-	  triangulos.push_back({ k, k+num_vertices+1, k+1}); //x abajo siguienre x, abajo x
+          // creamos cuadrado 
+          triangulos.push_back({k, k+num_vertices, k+num_vertices+1}); // x, x siguiente instancia y el de abajo de x
+          triangulos.push_back({ k, k+num_vertices+1, k+1}); //x abajo siguienre x, abajo x
 	    
-	}
+        }
     }
 
 
