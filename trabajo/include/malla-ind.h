@@ -62,7 +62,14 @@ class MallaInd : public Objeto3D
 
 
 
+  //PARA VISUALIZACIÓN DE NORMALES
+private:
+  // array de vértices con los segmentos de las normales (vis. con GL_LINES)
+  // ( se crea bajo demanda en `visualizarNormales`)
+  ArrayVertices * array_verts_normales = nullptr ;
+  std::vector<Tupla3f> segmentos_normales ; // guarda los segmentos de normales
 
+  void visualizarNormales();
 
 } ;
 // ---------------------------------------------------------------------

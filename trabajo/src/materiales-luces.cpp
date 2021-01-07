@@ -53,8 +53,8 @@ void Textura::enviar()
    glGenTextures(1, &ident_textura);
 
   glActiveTexture(GL_TEXTURE0);          //Activar  identificador
-   glBindTexture(GL_TEXTURE_2D, ident_textura);
-  
+  glBindTexture(GL_TEXTURE_2D, ident_textura);
+  glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR ); 
   gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, ancho, alto, GL_RGB, GL_UNSIGNED_BYTE, imagen);
 
   enviada = true;
@@ -175,7 +175,7 @@ FuenteLuz::FuenteLuz( GLfloat p_longi_ini, GLfloat p_lati_ini, const Tupla3f & p
    //col_difuso    = p_color ;
    //col_especular = p_color ;
    //ind_fuente = -1 ; // la marca como no activable hasta que no se le asigne indice
-   CError();
+   // CError();
 }
 
 //----------------------------------------------------------------------
@@ -322,3 +322,4 @@ Col2Fuentes::Col2Fuentes()
    insertar( new FuenteLuz( -70.0, -30.0, Tupla3f { f1, f1*0.5, f1*0.5 } ) );
 
 }
+

@@ -77,6 +77,12 @@ class Escena
 
    // índice del objeto activo (en el vector 'objetos')
    unsigned ind_objeto_actual = 0 ;
+
+
+  //PARA VISUALIZAR NORMALES
+
+private:
+  void visualizarNormales( ContextoVis & cv );
 } ;
 
 

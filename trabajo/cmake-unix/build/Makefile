@@ -439,6 +439,33 @@ home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.s
 .PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.s
 
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.o: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.o
+
+# target to build an object file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.i: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.i
+
+# target to preprocess a source file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i
+
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.s: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s
+
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.s
+
+# target to generate assembly for a file
+home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s
+.PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s
+
 home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.o: home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o
 
 .PHONY : home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.o
@@ -697,6 +724,9 @@ help:
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.o"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.i"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.s"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.o"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.i"
+	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.s"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.o"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.i"
 	@echo "... home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.s"

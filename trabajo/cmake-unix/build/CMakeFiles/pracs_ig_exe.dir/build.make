@@ -141,9 +141,22 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.s
 
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp
+
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp > CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.i
+
+CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.s
+
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.i: cmake_force
@@ -169,7 +182,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.i: cmake_force
@@ -182,7 +195,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.cpp.i: cmake_force
@@ -195,7 +208,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.cpp.i: cmake_force
@@ -208,7 +221,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.cpp.i: cmake_force
@@ -221,7 +234,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp.i: cmake_force
@@ -234,7 +247,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/trasformaciones-aux.cpp.i: cmake_force
@@ -247,7 +260,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/cauce.cpp.i: cmake_force
@@ -260,7 +273,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recurso
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/fbo.cpp.i: cmake_force
@@ -273,7 +286,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recurso
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/ig-aux.cpp.i: cmake_force
@@ -286,7 +299,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recurso
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-jpg.cpp.i: cmake_force
@@ -299,7 +312,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recurso
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/lector-ply.cpp.i: cmake_force
@@ -312,7 +325,7 @@ CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recurso
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o: CMakeFiles/pracs_ig_exe.dir/flags.make
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o: /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o -c /home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp
 
 CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.i: cmake_force
@@ -330,6 +343,7 @@ pracs_ig_exe_OBJECTS = \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.cpp.o" \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/escena.cpp.o" \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.o" \
+"CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o" \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o" \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o" \
 "CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o" \
@@ -353,6 +367,7 @@ pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-g
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/escena.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.cpp.o
+pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/main.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp.o
@@ -369,7 +384,7 @@ pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-g
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/home/blanca/repositorios/inform-tica-gr-fica/recursos/src/matrices-tr.cpp.o
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/build.make
 pracs_ig_exe: CMakeFiles/pracs_ig_exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable pracs_ig_exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/blanca/repositorios/inform-tica-gr-fica/trabajo/cmake-unix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable pracs_ig_exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pracs_ig_exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

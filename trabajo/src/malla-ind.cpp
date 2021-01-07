@@ -113,6 +113,18 @@ void MallaInd::visualizarGL( ContextoVis & cv )
    using namespace std ;
    assert( cv.cauce_act != nullptr );
 
+   //VISUALIZAR NORMALES
+
+   /**
+      En el método visualizarGL de la clase MallaInd, al inicio del mismo, se debe comprobar si la variable cv.visualizando_normales está a true, en ese caso se llama a visualizarNormales y después acaba visualizarGL, sin nada más.
+   */
+   if( cv.visualizando_normales == true)
+     {
+        visualizarNormales();
+        return;
+     }
+   //fin visualizar normales 
+
    if ( triangulos.size() == 0 || vertices.size() == 0 )
    {  cout << "advertencia: intentando dibujar malla vacía '" << leerNombre() << "'" << endl << flush ;
       return ;
@@ -212,6 +224,30 @@ MallaPLY::MallaPLY( const std::string & nombre_arch )
 
 }
 
+
+// PARA VISUALIZAR NORMALES 
+void MallaInd::visualizarNormales()
+{
+   using namespace std ;
+
+   if ( nor_ver.size() == 0 )
+   {
+      cout << "Advertencia: intentando dibujar normales de una malla que no tiene tabla (" << leerNombre() << ")." << endl ;
+      return ;
+   }  
+   if ( array_verts_normales == nullptr )
+   {  
+      for( unsigned i = 0 ; i < vertices.size() ; i++ )
+      {  
+         segmentos_normales.push_back( vertices[i] );
+         segmentos_normales.push_back( vertices[i]+ 0.35f*(nor_ver[i]) );
+      }
+      array_verts_normales = new ArrayVertices( GL_FLOAT, 3, segmentos_normales.size(), segmentos_normales.data() );
+   }
+
+   array_verts_normales->visualizarGL_MI_DAE( GL_LINES );
+   CError();
+}
 
 // ****************************************************************************
 // Clase 'Cubo
