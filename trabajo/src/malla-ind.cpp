@@ -143,18 +143,34 @@ void MallaInd::visualizarGL( ContextoVis & cv )
    if(array_verts == nullptr ) { // comprobamos si array_verts es nulo 
      array_verts = new ArrayVertices( GL_FLOAT, 3, vertices.size(), vertices.data());  
    }
+    array_verts->fijarIndices (GL_UNSIGNED_INT, 3*triangulos.size(), triangulos.data() );
 
-   if( !col_ver.empty()  )
-     array_verts->fijarColores(GL_FLOAT, 3, col_ver.data());
-   
-   if(! nor_ver.empty() )
-     array_verts->fijarNormales(GL_FLOAT,  nor_ver.data());
-  
-   if( !cc_tt_ver.empty()  )
-     array_verts->fijarCoordText(GL_FLOAT, 2, cc_tt_ver.data());
-   
-   
-   array_verts->fijarIndices (GL_UNSIGNED_INT, 3*triangulos.size(), triangulos.data() ); 
+    if(cv.modo_seleccion)
+      {
+      //leer identificador del objeto
+      int iden = leerIdentificador();
+      if ( iden != -1)
+        {
+          //FijarColVertsIdent(*cv.cauce_act, iden);
+      //si es distinto de -1 fijamos el color actual en el cauce usando
+      //el identificador 
+        }
+      }
+    else
+      {
+
+        if( !col_ver.empty()  )
+          array_verts->fijarColores(GL_FLOAT, 3, col_ver.data());
+        
+        if(! nor_ver.empty() )
+          array_verts->fijarNormales(GL_FLOAT,  nor_ver.data());
+        
+        if( !cc_tt_ver.empty()  )
+          array_verts->fijarCoordText(GL_FLOAT, 2, cc_tt_ver.data());
+        
+        
+      }
+    
    // fin de mi completado 
 
 

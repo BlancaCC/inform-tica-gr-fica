@@ -33,13 +33,15 @@ void MallaRevol::inicializar
 
   std::vector<Tupla3f> normalesAristas, vertsAux;
    Tupla3f normal, aux;
+   
    for(unsigned i = 0; i<perfil.size()-1; i++)
      {
 
       aux = (perfil[i+1]-perfil[i]);
-      normal(0)=aux(1);
-      normal(1)=-aux(0);
-      normal(2)=0;
+      normal(0) = aux(1);
+      normal(1) = -aux(0);
+      normal(2) = 0;
+      
       if(normal.lengthSq()>0)
          normalesAristas.push_back(normal.normalized());
       else
@@ -61,12 +63,13 @@ void MallaRevol::inicializar
    if(normalesAristas[perfil.size()-2].lengthSq()!=0)
      nor_ver[perfil.size()-1]=normalesAristas[perfil.size()-2];
 
-
+ 
+   
    // __- normales textura ___ 
 
 
    std::vector<float> d, t;
-   float den=0;
+   float den = 0;
    for(unsigned int i = 0; i<perfil.size()-1; i++)
      {
       d.push_back(sqrt((perfil[i+1]-perfil[i]).lengthSq()));
@@ -95,14 +98,19 @@ void MallaRevol::inicializar
   
   // primero crear table de vértices (se parte del perfil original y se inserta al final una copia de los vertices del principio)
 
+  double angulo; 
   for( unsigned int i=0 ; i< num_copias; i++) //numero instancias
     {
-      matriz_rotacion = MAT_Rotacion( (360.0 * i) / (num_copias-1), 0.0, 1.0, 0.0); 
+      angulo = 2*i*180/(num_copias-1);
+      matriz_rotacion = MAT_Rotacion( angulo, 0.0, 1.0, 0.0); 
       for( int j=0; j< num_vertices ; j++) // numéro de vértices en el perfil
         {
           q = matriz_rotacion * perfil[j];
           vertices.push_back(q); 
-	  
+
+          // PRÁCTICA 4
+          nor_ver.push_back(MAT_Rotacion(angulo, {0,1,0})*nor_ver[j]);
+          cc_tt_ver.push_back({float(i)/float(perfil.size()-1),1.0-t[j]});
           // hay que obtener el vértice q rotando p_j un ángulo de 2pi * i /(n-1)
 	  
         }

@@ -148,6 +148,14 @@ objeto3d.h
 array-verts.h
 ../../../trabajo/include/array-verts.h
 
+../../../trabajo/include/malla-revol.h
+vector
+-
+string
+-
+malla-ind.h
+../../../trabajo/include/malla-ind.h
+
 ../../../trabajo/include/materiales-luces.h
 vector
 -
@@ -178,13 +186,15 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.cpp
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp
 ig-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
 tuplasg.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/tuplasg.h
-malla-ind.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.h
 lector-ply.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/lector-ply.h
+matrices-tr.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/matrices-tr.h
+malla-revol.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.h
 

@@ -222,6 +222,21 @@ void ColFuentesLuz::activar( Cauce & cauce )
    //    usar el cauce para activarlas)
    // .....
 
+  std::vector<Tupla3f> color;
+   std::vector<Tupla4f> pos_dir_wc;
+
+   for(unsigned int i=0; i< vpf.size(); i++){
+      color.push_back(vpf[i]->color); //DUDA
+      Tupla4f ejeZ = {0.0,0.0,1.0,0.0};
+
+      ejeZ=MAT_Rotacion(vpf[i]->longi, 0.0, 1.0, 0.0) * ejeZ;
+      ejeZ=MAT_Rotacion(vpf[i]->lati, -1.0, 0.0, 0.0) * ejeZ;
+
+      pos_dir_wc.push_back(ejeZ);
+   }
+
+   cauce.fijarFuentesLuz(color, pos_dir_wc);
+  /**
   std::vector<Tupla3f> colores;
   std::vector<Tupla4f> pos_dir;
   Tupla4f pd;
@@ -235,6 +250,7 @@ void ColFuentesLuz::activar( Cauce & cauce )
   }
   
   cauce.fijarFuentesLuz(colores, pos_dir);
+  */
 }
 
 // ---------------------------------------------------------------------
