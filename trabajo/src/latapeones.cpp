@@ -67,7 +67,8 @@ Lata::Lata(const string nombre, const std::string & texturaJPG)
 }
 
 
-LataTapaSup::LataTapaSup(){
+LataTapaSup::LataTapaSup()
+{
   
     agregar( new Material(0.33,0.33,0.33,40)  ); 
     agregar(new MallaRevolPLY("../recursos/plys/lata-psup.ply", 20));
@@ -76,9 +77,10 @@ LataTapaSup::LataTapaSup(){
     ponerIdentificador(-1); // DUDA IDENTIFICADORES
 }
 
-LataTapaInf::LataTapaInf(){
-  agregar( new Material(0.33,0.33,0.33,40)  ); 
-  //agregar( new Material(0.6,0.6,1.0,100) ); 
+LataTapaInf::LataTapaInf()
+{
+
+    agregar( new Material(0.33,0.33,0.33,40)  ); 
     agregar(new MallaRevolPLY("../recursos/plys/lata-pinf.ply", 20));
     ponerNombre("Tapa inferior lata");
     ponerIdentificador(-1);

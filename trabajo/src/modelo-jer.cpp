@@ -119,7 +119,11 @@ Submarino:: Submarino()
   unsigned indice = agregar(MAT_Traslacion(6,0,0) * MAT_Rotacion(90, 0,1,0)); 
 
   // cuerpo general
-  agregar(MAT_Escalado(0.6, 0.6, 0.6)); 
+  agregar(MAT_Escalado(0.6, 0.6, 0.6));
+
+  //textura metálica pero no muy brillante
+  agregar( new Material( 0.8, 0.2, 0.6, 10));
+  
   agregar( new Cuerpo(rotTurbina));
 
   //mirilla
@@ -131,7 +135,9 @@ Submarino:: Submarino()
   agregar(MAT_Escalado(0.5, 0.5, 0.5)); 
   agregar(new ParaGolpes()); 
 
-  traslacionCuerpoSubmarino = leerPtrMatriz(indice);  
+  traslacionCuerpoSubmarino = leerPtrMatriz(indice);
+
+  
   
 }
 
@@ -173,9 +179,11 @@ BaseCuerpo :: BaseCuerpo ( )
   const unsigned nperfiles = 20;
   
   agregar( MAT_Escalado( semieje_x, semieje_y, semieje_y));
-  agregar( new Esfera( num_verts_per, nperfiles));
-  ponerColor(gris);  // esta variable se define en colores-aux.h
+
   
+  
+  agregar( new Esfera( num_verts_per, nperfiles));
+   ponerColor(amarillo);  // esta variable se define en colores-aux.h
   
 }
 
@@ -221,21 +229,28 @@ EspigaTurbina:: EspigaTurbina ( )
   const int num_verts_per = 4; 
   const unsigned nperfiles = 25; // para que salga redondo
 
+  Textura * textura = new Textura("../recursos/imgs/text-madera.jpg");
+  agregar( new Material( textura, 0.2, 0.8, 0.0, 1));
+  
   //tubo turbina 
   agregar(MAT_Rotacion(270.0, 0.0, 0.0, 1.0 ));
   agregar(MAT_Escalado(0.1, 1.7  , 0.1 )); 
   agregar( new Cilindro( num_verts_per, nperfiles));
-  ponerColor( negro);  
+  //ponerColor( negro);  
 }
 
 
 Aspa::Aspa()
 {
+
+  Textura * t_cuerpo = new Textura("./imgs/laminas.jpg");
+  agregar( new Material( t_cuerpo, 0.4, 0.3, 0.3, 15));
   
   agregar(MAT_Traslacion(0,-1.0, 0)); 
   agregar(MAT_Escalado(1.0/3.0, 1.0, 0.07/3) ); 
   agregar(new PrismaTrapecio());
-  ponerColor(amarillo); 
+  //ponerColor(amarillo);
+  
  
 }
 
@@ -280,8 +295,11 @@ Mirilla:: Mirilla ( )
   const int num_verts_per = 4; 
   const unsigned nperfiles = 25; // para que salga redondo
 
-  //tubo vertical
+  // textura de la ugr xD
+  //Textura * t_cuerpo = new Textura("../recursos/imgs/window-icon.jpg");
+  agregar( new Material( 0.4, 0.3, 1.0, 40));
   
+  //tubo vertical
   
   agregar(MAT_Escalado(0.1, 2  , 0.1 ));
   agregar( new Cilindro( num_verts_per, nperfiles));
