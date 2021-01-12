@@ -82,12 +82,6 @@ iostream
 jpeglib.h
 -
 
-../../../recursos/include/lector-ply.h
-tuplasg.h
--
-vector
--
-
 ../../../recursos/include/matrices-tr.h
 vector
 -
@@ -140,6 +134,20 @@ vector
 practicas.h
 ../../../trabajo/include/practicas.h
 
+../../../trabajo/include/grafo-escena.h
+matrices-tr.h
+../../../trabajo/include/matrices-tr.h
+objeto3d.h
+../../../trabajo/include/objeto3d.h
+materiales-luces.h
+../../../trabajo/include/materiales-luces.h
+
+../../../trabajo/include/latapeones.h
+objeto3d.h
+../../../trabajo/include/objeto3d.h
+grafo-escena.h
+../../../trabajo/include/grafo-escena.h
+
 ../../../trabajo/include/malla-ind.h
 vector
 -
@@ -186,15 +194,19 @@ camara.h
 escena.h
 ../../../trabajo/include/escena.h
 
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.cpp
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.cpp
+math.h
+-
 ig-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
-tuplasg.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/tuplasg.h
-lector-ply.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/lector-ply.h
 matrices-tr.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/matrices-tr.h
+grafo-escena.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.h
 malla-revol.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.h
+materiales-luces.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.h
+latapeones.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.h
 

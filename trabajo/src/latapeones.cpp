@@ -15,14 +15,31 @@ LataPeones::LataPeones()
 
   agregar( new Lata("Lata de coke", "../recursos/imgs/lata-coke.jpg"));
 
-  agregar( MAT_Traslacion(2,0,0));
-  agregar( new Lata("Lata de pesi", "../recursos/imgs/lata-pepsi.jpg"));
+  //agregar( MAT_Traslacion(2,0,0));
+  //agregar( new Lata("Lata de pesi", "../recursos/imgs/lata-pepsi.jpg"));
+  agregar( MAT_Traslacion(0,0,1));
+  
+  agregar(new PeonMadera("Peón Madera", "../recursos/imgs/text-madera.jpg"));
+
+  agregar( MAT_Traslacion(1,0,0));
+  
+  agregar(new PeonBlanco("Peón Blanco"));
+  
+  agregar( MAT_Traslacion(1,0,0));
+  
+  agregar(new PeonNegro("Peón Blanco"));
+
 }
 
 
 Lata::Lata(const string nombre, const std::string & texturaJPG)
 {
+  //
 
+  float factor = 1.5; // he mirado las coordenada del ply para coger una buena escala
+  agregar( MAT_Escalado(factor, factor, factor));
+
+  
    // ___tapas ___
 
   agregar(new LataTapaSup());
@@ -52,21 +69,64 @@ Lata::Lata(const string nombre, const std::string & texturaJPG)
 
 LataTapaSup::LataTapaSup(){
   
-    agregar( new Material(0.6,0.6,1.0,100)  ); 
+    agregar( new Material(0.33,0.33,0.33,40)  ); 
     agregar(new MallaRevolPLY("../recursos/plys/lata-psup.ply", 20));
     
     ponerNombre("Tapa superior lata");
-    ponerIdentificador(-1);
+    ponerIdentificador(-1); // DUDA IDENTIFICADORES
 }
 
 LataTapaInf::LataTapaInf(){
-    agregar( new Material(0.6,0.6,1.0,100) ); 
+  agregar( new Material(0.33,0.33,0.33,40)  ); 
+  //agregar( new Material(0.6,0.6,1.0,100) ); 
     agregar(new MallaRevolPLY("../recursos/plys/lata-pinf.ply", 20));
     ponerNombre("Tapa inferior lata");
     ponerIdentificador(-1);
 }
 
 
-Peon::Peon(const string nombre, const std::string & texturaJPG){
-    agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+
+
+PeonMadera :: PeonMadera( const string nombre, const string & texturaJPG)
+{
+
+  float factor = 1.0/(2*1.5); // he mirado las coordenada del ply para coger una buena escala
+  agregar( MAT_Escalado(factor, factor, factor));
+   ponerNombre(nombre);
+  Textura * tex_madera =  new Textura(texturaJPG); 
+  tex_madera ->modo_gen_ct =  mgct_coords_objeto;
+
+
+  agregar(new Material(tex_madera, 0, 0.7,0.3, 1.0 )); 
+  agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+ 
 }
+
+
+
+PeonBlanco :: PeonBlanco ( const string nombre) 
+{
+  float factor = 1.0/(2*1.5); // he mirado las coordenada del ply para coger una buena escala
+  agregar( MAT_Escalado(factor, factor, factor));
+   ponerNombre(nombre);
+
+   
+  
+
+  agregar(new Material( 0.1, 0.9,0.0, 1.0 )); 
+  agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+};
+
+
+PeonNegro :: PeonNegro ( const string nombre) 
+{
+  float factor = 1.0/(2*1.5); // he mirado las coordenada del ply para coger una buena escala
+  agregar( MAT_Escalado(factor, factor, factor));
+   ponerNombre(nombre);
+
+   
+  
+   ponerColor({0,0,0});
+  agregar(new Material( 0.1, 0.1,1.0, 30 )); 
+  agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+};

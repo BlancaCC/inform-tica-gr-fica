@@ -41,12 +41,28 @@ public:
 };
 
 
-class Peon : public NodoGrafoEscena
+
+class PeonMadera : public NodoGrafoEscena
 {
     public:
-  Peon(const std::string nombre, const std::string & texturaJPG);
+  PeonMadera(const std::string nombre, const std::string & texturaJPG);
 
 };
 
+
+class PeonBlanco : public NodoGrafoEscena
+{
+    public:
+  PeonBlanco(const std::string nombre);
+
+};
+
+
+class PeonNegro : public NodoGrafoEscena
+{
+    public:
+  PeonNegro(const std::string nombre);
+
+};
 
 #endif

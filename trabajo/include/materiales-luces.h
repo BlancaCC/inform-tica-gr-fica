@@ -80,6 +80,7 @@ class Textura
       alto          = 0 ; // número de filas de la imagen
    unsigned char *
       imagen        = nullptr ; // pixels de la imagen, por filas.
+public:
    ModoGenCT
       modo_gen_ct   = mgct_desactivada ;  // modo de generacion de coordenadas de textura
    float

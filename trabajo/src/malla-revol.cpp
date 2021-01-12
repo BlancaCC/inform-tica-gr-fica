@@ -65,19 +65,23 @@ void MallaRevol::inicializar
 
  
    
-   // __- normales textura ___ 
+   // __- coordenadas  textura ___ 
 
+   
 
-   std::vector<float> d, t;
-   float den = 0;
+   std::vector<float> d, // vector almacena distancia euclídiea entre dos puntos
+     t; // vector que almacena la coordenada de textura en el eje y 
+   float alto = 0;
    for(unsigned int i = 0; i<perfil.size()-1; i++)
      {
+       //distancia e
       d.push_back(sqrt((perfil[i+1]-perfil[i]).lengthSq()));
-      den += d[i];
+      // 
+      alto += d[i]; // vamos acumulando alto
    }
    t.push_back(0);
    for(unsigned int i = 1; i<perfil.size(); i++)
-      t.push_back(t[i-1]+d[i-1]/den);
+      t.push_back(t[i-1]+d[i-1]/alto);
 
 
    
@@ -110,8 +114,11 @@ void MallaRevol::inicializar
 
           // PRÁCTICA 4
           nor_ver.push_back(MAT_Rotacion(angulo, {0,1,0})*nor_ver[j]);
-          cc_tt_ver.push_back({float(i)/float(perfil.size()-1),1.0-t[j]});
-          // hay que obtener el vértice q rotando p_j un ángulo de 2pi * i /(n-1)
+
+          cc_tt_ver.push_back({ float(i)/(num_copias-1),
+              1.0- t[j] //empieza  de arriba abaoj  // DUDA QUE É LA TE
+            });
+          
 	  
         }
     }
