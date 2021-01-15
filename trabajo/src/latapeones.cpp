@@ -9,14 +9,46 @@
 using namespace std;
 
 
+// --- práctica 5 -----
+LataPeones5::LataPeones5()
+{
+  ponerNombre("Lata Peones");
+
+  // añadimos latas
+  Lata * lataCocaCola =  new Lata("Lata de Coca-Cola", "../recursos/imgs/lata-coke.jpg", 1);
+  agregar(lataCocaCola);
+
+  agregar( MAT_Traslacion(2,0,0));
+  agregar( new Lata("Lata de Pepsi", "../recursos/imgs/lata-pepsi.jpg",2));
+
+  agregar( MAT_Traslacion(2,0,0));
+  agregar( new Lata("Lata de la UGR", "../recursos/imgs/window-icon.jpg",3));
+
+  agregar( MAT_Traslacion(0,0,2));
+
+  // añadimos peones 
+  agregar(new PeonMadera("Peón Madera", "../recursos/imgs/text-madera.jpg"));
+
+  agregar( MAT_Traslacion(-2,0,0));
+  
+  agregar(new PeonBlanco("Peón Blanco"));
+  
+  agregar( MAT_Traslacion(-2,0,0));
+  
+  agregar(new PeonNegro("Peón Blanco"));
+
+}
+
+
+
+// ---- práctica  4 -----
+
 LataPeones::LataPeones()
 {
   ponerNombre("Lata Peones");
 
   agregar( new Lata("Lata de coke", "../recursos/imgs/lata-coke.jpg"));
 
-  //agregar( MAT_Traslacion(2,0,0));
-  //agregar( new Lata("Lata de pesi", "../recursos/imgs/lata-pepsi.jpg"));
   agregar( MAT_Traslacion(0,0,1));
   
   agregar(new PeonMadera("Peón Madera", "../recursos/imgs/text-madera.jpg"));
@@ -32,7 +64,7 @@ LataPeones::LataPeones()
 }
 
 
-Lata::Lata(const string nombre, const std::string & texturaJPG)
+Lata::Lata(const string nombre, const std::string & texturaJPG, int identificador)
 {
   //
 
@@ -56,12 +88,9 @@ Lata::Lata(const string nombre, const std::string & texturaJPG)
   agregar( new Material(tex, 0.5,0.3,0.8,100) );
   agregar(new MallaRevolPLY("../recursos/plys/lata-pcue.ply",30));
 
-
- 
-
   
   ponerNombre(nombre);
-  ponerIdentificador(1);
+  ponerIdentificador(identificador); // recordemso que por defecto es -1
   
   
 }
@@ -101,6 +130,8 @@ PeonMadera :: PeonMadera( const string nombre, const string & texturaJPG)
 
   agregar(new Material(tex_madera, 0, 0.7,0.3, 1.0 )); 
   agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+
+  ponerIdentificador(4);
  
 }
 
@@ -112,11 +143,10 @@ PeonBlanco :: PeonBlanco ( const string nombre)
   agregar( MAT_Escalado(factor, factor, factor));
    ponerNombre(nombre);
 
-   
-  
-
   agregar(new Material( 0.1, 0.9,0.0, 1.0 )); 
   agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+
+  ponerIdentificador(5);
 };
 
 
@@ -131,4 +161,6 @@ PeonNegro :: PeonNegro ( const string nombre)
    ponerColor({0,0,0});
   agregar(new Material( 0.1, 0.1,1.0, 30 )); 
   agregar(new MallaRevolPLY("../recursos/plys/peon", 20));
+
+  ponerIdentificador(6);
 };

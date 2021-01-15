@@ -297,6 +297,13 @@ Camara3Modos::Camara3Modos( const bool perspectiva_ini,
 
 void Camara3Modos::desplRotarXY( const float da, const float db )
 {
+
+  //PRÁCTICA 5 VARIABLES AUXILIARES
+
+  
+
+  // ---
+  
    switch( modo_actual )
    {
       case ModoCam::examinar :
@@ -304,6 +311,13 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // COMPLETAR: práctica 5
          // actualizar las dos primeras componentes (ángulos) de las coordenadas polares
          // actualizar las coordenadas cartesianas a partir de las polares
+
+        
+        
+        org_polares[0] += da ;
+        org_polares[1] += db ;
+
+        org_cartesianas = Cartesianas(org_polares);
          // .....
 
          actualizarEjesMCV();
@@ -321,6 +335,16 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 5. actualizar los ejes del MCV (actualizarEjesMCV)
          // .....
 
+        org_polares[0] += da;
+        org_polares[1] += db;
+
+        Tupla3f n_cartesianas = Cartesianas(org_polares);
+        
+        punto_atencion = punto_atencion + n_cartesianas - org_cartesianas;
+
+        org_cartesianas = n_cartesianas;
+
+        actualizarEjesMCV();
 
          break ;
       }
@@ -331,6 +355,15 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 'db' unidades en el eje Y de la cámara.
          // .....
          // (nota: los ejes no cambian)
+
+        punto_atencion[0] += da;
+        punto_atencion[1] += db; 
+
+
+        //DUDA
+        // en la diapositiva 40 del tema 4 además hace:
+        // marco_de_camara = punto_atencion + coordenada_cartesianas
+        // aquí no se mueve proqe se hace de manera relativo al marco de página
 
          break ;
       }
@@ -352,6 +385,13 @@ void Camara3Modos::moverZ( const float dz )
          // actualizar el radio de las coordenadas polares
          // actualizar las coordenadas cartesianas a partir de las polares
          // nota: los ejes no cambian, ni el punto de atención
+
+        const float r_min = 0.1; // el radio nunca debe ser inferior a 0
+        const float epsilon = 0.01;
+
+        org_polares[2] = r_min + (org_polares[2] - r_min)* pow( (1 + epsilon) , dz);
+        org_cartesianas = Cartesianas(org_polares); 
+       
          // .....
 
          break ;
@@ -363,7 +403,8 @@ void Camara3Modos::moverZ( const float dz )
          // desplazar el punto de atención 'dz' unidades en el eje Z
          // nota: los ejes no cambian
          // .....
-
+        punto_atencion = punto_atencion + dz * eje[2]; 
+        
          break ;
       }
    }
@@ -379,6 +420,13 @@ void Camara3Modos::mirarHacia( const Tupla3f & nuevo_punto_aten )
    // Actualizar las coordenadas cartesianas (desplazarlas)
    // Actualizar las coordenadas polares a partir de las cartesianas
    // Poner el modo actual en modo examinar
+
+
+  //DUDA: por qué resta el punto de atención antiguo
+  org_cartesianas = org_cartesianas + nuevo_punto_aten - punto_atencion;
+  org_polares = Esfericas(org_cartesianas);
+  punto_atencion = nuevo_punto_aten;
+  modo_actual = ModoCam :: examinar;
 
 
    // actualizar los ejes del marco de coordenadas del mundo

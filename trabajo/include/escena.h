@@ -132,6 +132,14 @@ public:
   Escena4();
 };
 
+
+class Escena5 : public Escena
+{
+public:
+  Escena5();
+};
+
+
 // -------------
 
 

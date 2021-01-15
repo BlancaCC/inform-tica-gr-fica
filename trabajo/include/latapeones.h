@@ -5,6 +5,14 @@
 #include "grafo-escena.h"
 
 
+class LataPeones5 : public NodoGrafoEscena
+{
+  
+public:
+
+  LataPeones5(); 
+};
+
 class LataPeones : public NodoGrafoEscena
 {
   
@@ -16,7 +24,7 @@ public:
 class Lata : public NodoGrafoEscena
 {
     public:
-  Lata(const std::string nombre, const std::string & texturaJPG);
+  Lata(const std::string nombre, const std::string & texturaJPG, int identificador = -1);
 
 };
 
