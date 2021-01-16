@@ -69,6 +69,9 @@ class NodoGrafoEscena : public Objeto3D
   
    // .......
 
+  // PRÁCTICA 5 para recursividad
+  bool centro_calculado = false; 
+
    public:
 
    NodoGrafoEscena() ;
