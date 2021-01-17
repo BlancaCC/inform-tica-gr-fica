@@ -41,9 +41,22 @@ Escena::Escena()
    // (sustituir la cámara orbital simple ('CamaraOrbitalSimple') por varias cámaras de 3 modos ('Camara3Modos')
    //camaras.push_back( new CamaraOrbitalSimple() );
 
-   // DUDA DE CÓMO FUNCIONAS LAS CÁMARAS
+   
+   /** CÓMO FUNCIONAS LAS CÁMARAS
+   // crea una cámara, inicialmente en modo examinar, con el punto
+   // de atención en el origen, se especifica:
+   // * perspectiva_ini : true si es una camara perspectiva, false si es ortográfica
+   // * origen_ini      : punto de vista inicial (origen marco de cámara)
+   // * ratio_vp_ini    : alto del viewport dividido por el ancho del viewport
+   // * punto_aten_ini  : punto de atención
+   // * fovy_grad_ini   : si es perspectiva, la apertura de campo vertical, en grados
+
+   Camara3Modos( const bool perspectiva_ini,
+                 const Tupla3f & origen_ini, const float ratio_vp_ini,
+                 const Tupla3f & punto_aten_ini, const float fovy_grad_ini = 70.0 ) ;
+    */
    camaras.push_back(new Camara3Modos(true, {0.0,2.0,7.0}, 1.0, {0.0,0.0,0.0}, 90.0)); //alzado
-   camaras.push_back( new Camara3Modos(false, {-5.0,2.0,0.0}, 1.0, {0.0,0.0,0.0},60.0) ); //perfil
+   camaras.push_back( new Camara3Modos(false, {-5.0,2.0,0.0}, 1.0, {0.0,0.0,0.0}) ); //perfil
    camaras.push_back( new Camara3Modos(true, {0.0,7.0,1.0}, 4.0, {0.0,0.0,0.0},90.0) ); //planta
  
 
