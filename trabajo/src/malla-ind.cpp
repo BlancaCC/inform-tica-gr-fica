@@ -142,7 +142,7 @@ void MallaInd::visualizarGL( ContextoVis & cv )
    // pag 88 de las diapositivas 
    if(array_verts == nullptr ) { // comprobamos si array_verts es nulo 
      array_verts = new ArrayVertices( GL_FLOAT, 3, vertices.size(), vertices.data());  
-   }
+   
     array_verts->fijarIndices (GL_UNSIGNED_INT, 3*triangulos.size(), triangulos.data() );
 
    
@@ -155,7 +155,7 @@ void MallaInd::visualizarGL( ContextoVis & cv )
     if( !cc_tt_ver.empty()  )
       array_verts->fijarCoordText(GL_FLOAT, 2, cc_tt_ver.data());
         
-        
+   } 
       
     
    // fin de mi completado 
