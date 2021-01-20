@@ -55,12 +55,12 @@ Escena::Escena()
                  const Tupla3f & origen_ini, const float ratio_vp_ini,
                  const Tupla3f & punto_aten_ini, const float fovy_grad_ini = 70.0 ) ;
     */
-   camaras.push_back(new Camara3Modos(true, {0.0,2.0,7.0}, 1.0, {0.0,0.0,0.0}, 90.0)); //alzado
-   camaras.push_back( new Camara3Modos(false, {-5.0,2.0,0.0}, 1.0, {0.0,0.0,0.0}) ); //perfil
+   camaras.push_back(new Camara3Modos(true, {0.0,0.0,5.0}, 1.0, {0.0,0.0,0.0}, 90.0)); // de frente total
+   camaras.push_back( new Camara3Modos(false, {-5.0,3.0,0.0}, 1.0, {0.0,0.0,0.0}) ); //perfil
    camaras.push_back( new Camara3Modos(true, {0.0,7.0,1.0}, 4.0, {0.0,0.0,0.0},90.0) ); //planta
  
 
-   camaras.push_back( new Camara3Modos(true, {7.0,7.0,7.0}, 4.0, {0.0,0.0,0.0},90.0) ); //planta
+   camaras.push_back( new Camara3Modos(true, {7.0,7.0,7.0}, 4.0, {0.0,0.0,0.0},90.0) ); // alejarse como si no hubiera mañana
    
 
 }

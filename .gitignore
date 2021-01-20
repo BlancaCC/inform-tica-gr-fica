@@ -2,7 +2,9 @@
 *~
 *exe
 *.d
+/trabajo/cmake/build/*
 
+    
 # Compiled Object files
 *.slo
 *.lo

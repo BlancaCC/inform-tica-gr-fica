@@ -47,7 +47,7 @@ LataPeones::LataPeones()
 {
   ponerNombre("Lata Peones");
 
-  agregar( new Lata("Lata de coke", "../recursos/imgs/lata-coke.jpg"));
+  agregar( new Lata("Lata de coke", "../recursos/imgs/lata-coke.jpg", 1));
 
   agregar( MAT_Traslacion(0,0,1));
   

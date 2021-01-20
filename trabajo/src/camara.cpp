@@ -299,7 +299,7 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
 {
 
   //PRÁCTICA 5 VARIABLES AUXILIARES
-
+  float coef = 0.2;  // para que las cámaras vayan más suaves
   
 
   // ---
@@ -314,8 +314,8 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
 
         
         
-        org_polares[0] += da ;
-        org_polares[1] += db ;
+        org_polares[0] += coef*da ;
+        org_polares[1] += coef*db ;
 
         org_cartesianas = Cartesianas(org_polares);
          // .....
@@ -335,12 +335,12 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 5. actualizar los ejes del MCV (actualizarEjesMCV)
          // .....
 
-        org_polares[0] += da;
-        org_polares[1] += db;
+        org_polares[0] += coef*da;
+        org_polares[1] += coef*db;
 
         Tupla3f n_cartesianas = Cartesianas(org_polares);
         
-        punto_atencion = punto_atencion + n_cartesianas - org_cartesianas;
+        punto_atencion = punto_atencion - n_cartesianas + org_cartesianas;
 
         org_cartesianas = n_cartesianas;
 
@@ -356,8 +356,8 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // .....
          // (nota: los ejes no cambian)
 
-        punto_atencion[0] += da;
-        punto_atencion[1] += db; 
+        punto_atencion[0] += coef*da;
+        punto_atencion[1] += coef*db; 
 
 
         //DUDA
@@ -376,6 +376,7 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
 
 void Camara3Modos::moverZ( const float dz )
 {
+  float coef = 1; // coeficiente para que vayan más suave 
 
    switch( modo_actual )
    {
@@ -389,7 +390,7 @@ void Camara3Modos::moverZ( const float dz )
         const float r_min = 0.1; // el radio nunca debe ser inferior a 0
         const float epsilon = 0.01;
 
-        org_polares[2] = r_min + (org_polares[2] - r_min)* pow( (1 + epsilon) , dz);
+        org_polares[2] = r_min + coef*(org_polares[2] - r_min)* pow( (1 + epsilon) , dz);
         org_cartesianas = Cartesianas(org_polares); 
        
          // .....
@@ -403,7 +404,7 @@ void Camara3Modos::moverZ( const float dz )
          // desplazar el punto de atención 'dz' unidades en el eje Z
          // nota: los ejes no cambian
          // .....
-        punto_atencion = punto_atencion + dz * eje[2]; 
+        punto_atencion = punto_atencion +coef* dz * eje[2];  //HE PUESTO -DS
         
          break ;
       }

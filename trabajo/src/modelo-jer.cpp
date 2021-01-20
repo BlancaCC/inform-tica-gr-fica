@@ -129,14 +129,14 @@ Submarino:: Submarino()
   //mirilla
   agregar(MAT_Traslacion( 0.0,-1.0, 0.0)); // con -1 "se oculta, con 1 se muestra
   agregar(new MirillaAnimada( movimientoMirilla ));
-
+  
   //para golpes
   agregar(MAT_Traslacion( -2.2,1.2, 0.0));
   agregar(MAT_Escalado(0.5, 0.5, 0.5)); 
   agregar(new ParaGolpes()); 
 
   traslacionCuerpoSubmarino = leerPtrMatriz(indice);
-
+    ponerIdentificador( 1);
   
   
 }
@@ -162,6 +162,8 @@ Cuerpo :: Cuerpo(Matriz4f * & rotTurbina )
   agregar(inst_camara_turbina);
   agregar(MAT_Traslacion( 0,0.0, -2*2.1));
   agregar(inst_camara_turbina);
+
+      ponerIdentificador(-1);
 }
 
 BaseCuerpo :: BaseCuerpo ( ) 
@@ -192,7 +194,8 @@ Cabina :: Cabina ()
 {
   agregar(MAT_Cizalla_yx(0.5));  
   agregar (new Cubo());
-  ponerColor(azul); 
+  ponerColor(azul);
+      ponerIdentificador(-1);
 }
 
 
@@ -200,7 +203,8 @@ ParaGolpes :: ParaGolpes()
 {
   agregar(MAT_Cizalla_yx(0.5));
   agregar(new Esfera(15, 20));
-  ponerColor(amarillo); 
+  ponerColor(amarillo);
+      ponerIdentificador(-1);
 }
 
 //_______ TURNINA__________
@@ -220,7 +224,8 @@ Turbina:: Turbina(Matriz4f * & rotacion_turbina)
       agregar(MAT_Rotacion(360.0/3, 1.0, 0.0, 0.0 ));
     }
 
-   rotacion_turbina = leerPtrMatriz(ind); 
+   rotacion_turbina = leerPtrMatriz(ind);
+       ponerIdentificador(-1);
 }
 
 EspigaTurbina:: EspigaTurbina ( )
@@ -236,8 +241,11 @@ EspigaTurbina:: EspigaTurbina ( )
   agregar(MAT_Rotacion(270.0, 0.0, 0.0, 1.0 ));
   agregar(MAT_Escalado(0.1, 1.7  , 0.1 )); 
   agregar( new Cilindro( num_verts_per, nperfiles));
-  //ponerColor( negro);  
+  //ponerColor( negro);
+
+      ponerIdentificador(-1);
 }
+
 
 
 Aspa::Aspa()
@@ -250,7 +258,7 @@ Aspa::Aspa()
   agregar(MAT_Escalado(1.0/3.0, 1.0, 0.07/3) ); 
   agregar(new PrismaTrapecio());
   //ponerColor(amarillo);
-  
+      ponerIdentificador(-1);
  
 }
 
@@ -276,7 +284,7 @@ CamaraTurbina:: CamaraTurbina ( Objeto3D * & turbina)
   agregar(MAT_Rotacion(90.0, 0.0, 0.0, 1.0 ));
   agregar(MAT_Traslacion( 3.8,0.0, 0.0));
   agregar(turbina); 
-   
+       ponerIdentificador(-1);
 }
 
 // ________ FIN TURBINA 
@@ -312,5 +320,6 @@ Mirilla:: Mirilla ( )
   
   agregar( new Cilindro( num_verts_per, nperfiles));
   
-  ponerColor( negro);  
+  ponerColor( negro);
+      ponerIdentificador(-1);
 }
