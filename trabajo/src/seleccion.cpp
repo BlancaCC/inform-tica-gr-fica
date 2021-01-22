@@ -27,7 +27,7 @@ void FijarColVertsIdent( Cauce & cauce, const int ident )  // 0 ≤ ident < 2^24
   const unsigned char
     byteR = (ident) % 0x100U,            // rojo = byte menos significativo
     byteG = (ident / 0x100U) % 0x100U,   // verde = byte intermedio
-    byteB = (ident / 0x1000U) % 0x100U;  // azul = byte más significativo
+    byteB = (ident / 0x10000U) % 0x100U;  // azul = byte más significativo
 
   glColor3ub(byteR, byteG, byteB);       // cambio de color en OpenGL.
 

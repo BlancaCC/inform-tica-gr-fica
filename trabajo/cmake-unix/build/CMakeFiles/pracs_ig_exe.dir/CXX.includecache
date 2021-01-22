@@ -116,10 +116,6 @@ tuplasg_impl.h
 
 ../../../recursos/include/tuplasg_impl.h
 
-../../../trabajo/include/array-verts.h
-ig-aux.h
--
-
 ../../../trabajo/include/camara.h
 tuplasg.h
 ../../../trabajo/include/tuplasg.h
@@ -134,36 +130,6 @@ vector
 practicas.h
 ../../../trabajo/include/practicas.h
 
-../../../trabajo/include/grafo-escena.h
-matrices-tr.h
-../../../trabajo/include/matrices-tr.h
-objeto3d.h
-../../../trabajo/include/objeto3d.h
-materiales-luces.h
-../../../trabajo/include/materiales-luces.h
-
-../../../trabajo/include/latapeones.h
-objeto3d.h
-../../../trabajo/include/objeto3d.h
-grafo-escena.h
-../../../trabajo/include/grafo-escena.h
-
-../../../trabajo/include/malla-ind.h
-vector
--
-objeto3d.h
-../../../trabajo/include/objeto3d.h
-array-verts.h
-../../../trabajo/include/array-verts.h
-
-../../../trabajo/include/malla-revol.h
-vector
--
-string
--
-malla-ind.h
-../../../trabajo/include/malla-ind.h
-
 ../../../trabajo/include/materiales-luces.h
 vector
 -
@@ -173,10 +139,6 @@ tuplasg.h
 ../../../trabajo/include/tuplasg.h
 lector-jpg.h
 ../../../trabajo/include/lector-jpg.h
-
-../../../trabajo/include/modelo-jer.h
-grafo-escena.h
-../../../trabajo/include/grafo-escena.h
 
 ../../../trabajo/include/objeto3d.h
 string
@@ -206,29 +168,27 @@ practicas.h
 escena.h
 ../../../trabajo/include/escena.h
 
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/escena.cpp
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.cpp
+cmath
+-
+algorithm
+-
 ig-aux.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
-escena.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/escena.h
-objeto3d.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/objeto3d.h
-malla-ind.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-ind.h
-malla-revol.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/malla-revol.h
+camara.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.h
+
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.cpp
+ig-aux.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/ig-aux.h
+tuplasg.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/tuplasg.h
 practicas.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/practicas.h
 camara.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/camara.h
-materiales-luces.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/materiales-luces.h
+fbo.h
+/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/fbo.h
 seleccion.h
 /home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/seleccion.h
-modelo-jer.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/modelo-jer.h
-grafo-escena.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/grafo-escena.h
-latapeones.h
-/home/blanca/repositorios/inform-tica-gr-fica/trabajo/src/latapeones.h
 
